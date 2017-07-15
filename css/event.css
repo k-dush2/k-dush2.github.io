@@ -10,6 +10,11 @@
   height: auto;
 }
 
+.event_line {
+  width: 70%;
+  text-align: center;
+}
+
 h2 {
   font-size: 25px;
   padding: 10px;
