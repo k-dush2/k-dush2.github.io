@@ -97,3 +97,9 @@ if(top - 400 <= 50 && top - 400 >= -50){
 }
 
 })()
+
+$(function(){
+        $(window).on('touchmove.noScroll', function(e) {
+            e.preventDefault();
+        });
+});
