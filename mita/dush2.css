@@ -1,0 +1,59 @@
+.drag-card {
+cursor: move;
+width:100px;
+height:200px;
+position:absolute;
+z-index:1000;
+color:#fff;
+font-size:20px;
+line-height:100px;
+text-align:center;
+}
+#card1{
+  left:100px;
+  top:100px;
+  background-image: url("card1.png");
+}
+#card2{
+  left:250px;
+  top:100px;
+  background-image: url("card2.png");
+}
+#card3{
+  left:400px;
+  top:100px;
+  background-image: url("card3.png");
+}
+
+.answer-box {
+width:106px;
+height:206px;
+position:absolute;
+z-index:10;
+border: 3px;
+border-color: black;
+background-color: black;
+font-size:20px;
+text-align:center;
+}
+
+#box1{
+  left: 97px;
+  top: 397px;
+}
+#box2{
+  left: 247px;
+  top: 397px;
+}
+#box3{
+  left: 397px;
+  top: 397px;
+}
+
+.drag {
+    z-index: 1001;
+}
+
+body{
+  background-color: blue;
+}
