@@ -1,0 +1,26 @@
+@charset "UTF-8";
+area{
+  border:none;
+  outline:none;
+  cursor:url("file:///Applications/Eclipse_4.8.0.app/Contents/workspace/mitasai2018/WebContent/image/magicre.png"),pointer;
+}
+.web
+{ 	margin: 0 auto;
+	width:1024px;
+	max-width: 100%;
+	height: auto;
+}
+	}
+
+.map {
+    position: relative;
+    width: 1024px;
+    height:auto;
+}
+.textform {
+	font-size: 23px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:10em;
+}
