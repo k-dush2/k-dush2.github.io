@@ -1,0 +1,128 @@
+.drag-card {
+cursor: move;
+width:173px;
+height:275px;
+position:absolute;
+z-index:1000;
+color:#fff;
+font-size:20px;
+line-height:100px;
+text-align:center;
+background-size: 173px 275px;
+}
+#card1{
+  left:100px;
+  top:100px;
+  background-image: url("../image/card1.png");
+}
+#card2{
+  left:200px;
+  top:100px;
+  background-image: url("../image/card2.png");
+}
+#card3{
+  left:300px;
+  top:100px;
+  background-image: url("../image/card3.png");
+}
+#card4{
+  left:400px;
+  top:100px;
+  background-image: url("../image/card4.png");
+}
+#card5{
+  left:500px;
+  top:100px;
+  background-image: url("../image/card5.png");
+}
+#card6{
+  left:600px;
+  top:100px;
+  background-image: url("../image/card6.png");
+}
+#card7{
+  left:700px;
+  top:100px;
+  background-image: url("../image/card7.png");
+}
+#card8{
+  left:800px;
+  top:100px;
+  background-image: url("../image/card8.png");
+}
+#card1_flip{
+  left:233px;
+  top:335px;
+}
+#card2_flip{
+  left:333px;
+  top:335px;
+}
+#card3_flip{
+  left:433px;
+  top:335px;
+}
+#card4_flip{
+  left:533px;
+  top:335px;
+}
+#card5_flip{
+  left:633px;
+  top:335px;
+}
+#card6_flip{
+  left:733px;
+  top:335px;
+}
+#card7_flip{
+  left:833px;
+  top:335px;
+}
+#card8_flip{
+  left:933px;
+  top:335px;
+}
+
+.answer-box {
+width:179px;
+height:281px;
+position:absolute;
+z-index:10;
+border: 3px;
+border-color: black;
+background-color: black;
+font-size:20px;
+text-align:center;
+}
+
+
+
+.drag {
+    z-index: 1003;
+}
+
+.flipbutton{
+  z-index:1002;
+  position:absolute;
+  width:30px;
+  height: 30px;
+  background-color: red;
+}
+
+.missions{
+  width:45%;
+  height: 45%;
+}
+body{
+  background-color:rgb(83,123,132);
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-image: url("../image/mitabg.png")
+}
+.form{
+  text-align: center;
+}
+input{
+  font-size:40px;
+}
