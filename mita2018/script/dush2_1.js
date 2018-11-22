@@ -130,7 +130,7 @@ function checkanswer(){
   if(ansssss==8){
     var flipside=document.getElementsByClassName("flipbutton")
     if(flipside[0].innerHTML=="裏" && flipside[1].innerHTML=="裏" && flipside[2].innerHTML=="裏" && flipside[3].innerHTML=="裏" && flipside[4].innerHTML=="表" && flipside[5].innerHTML=="表" &&flipside[6].innerHTML=="表" && flipside[7].innerHTML=="表"){
-    location.href="index5.html"
+    location.href="YouW0nThe2chrome.html"
 }
 }
 }
