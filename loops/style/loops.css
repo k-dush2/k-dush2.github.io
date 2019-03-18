@@ -1,0 +1,19 @@
+
+body{
+  background-color:rgb(83,123,132);
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-color: cyan;
+}
+.form{
+  text-align: center;
+}
+input{
+  font-size:40px;
+}
+
+img{
+  height:100%;
+  width:100%;
+}
