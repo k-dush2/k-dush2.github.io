@@ -71,3 +71,9 @@ function checkAns(id){
 	}
 
 }
+function disp(a){
+	var stl="hint"+a
+	var sty=document.getElementById("hint"+a)
+	var elst=sty.style
+	elst.display="inline"
+}

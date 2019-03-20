@@ -17,3 +17,19 @@ img{
   height:100%;
   width:100%;
 }
+img.q2{
+  height:50%;
+  width:50%;
+}
+
+
+a{
+  text-decoration: underline;
+}
+.hint{
+  font-size: 30px;
+}
+.box{
+  position:relative;
+  left:10%;
+}
