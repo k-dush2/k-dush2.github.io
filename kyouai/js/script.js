@@ -149,7 +149,7 @@ function ontextboxenter(key)
 	{
 		console.log('enter pressed');
 		key.target.value = hiraganaToKatagana(key.target.value.trim());
-		// check_2h(true);
+		 check_2h();
 	}
 	console.log(key.keyCode);
 }
