@@ -1,10 +1,10 @@
 
 body{
-  background-color:rgb(83,123,132);
+
   background-size: cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
-  background-color: cyan;
+  background-color: lightskyblue;
 }
 .form{
   text-align: center;
@@ -22,7 +22,12 @@ img.q2{
   width:50%;
 }
 
-
+.buts{
+ position: relative;
+  height: 63px;
+  width: 315px;
+  top:16px;
+}
 a{
   text-decoration: underline;
 }
@@ -32,4 +37,15 @@ a{
 .box{
   position:relative;
   left:10%;
+  color: black;
+
+  margin-right: 300px;
+
+}
+div.box{
+    background: linear-gradient(90deg,aquamarine, lightskyblue);;
+}
+.hintp{
+text-align: center;
+font-size: 24px;
 }
