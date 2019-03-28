@@ -161,7 +161,7 @@ function check_2h()
 
 function check_2h_a()
 {
-	const ans = '愛してる';
+	const ans = 'アイシテル';
 	var nexttext = document.getElementById('s2textbox');
 	if (nexttext.value.trim() == ans)
 	{
@@ -177,7 +177,7 @@ function check_2h_a()
 function check_6()
 {
 	var extraboxes = document.getElementsByName('s6textbox');
-	if (extraboxes[0].value == '大好き' && extraboxes[1].value == '愛してる')
+	if (extraboxes[0].value == '大好き' && extraboxes[1].value == '愛してる' || extraboxes[0].value == 'ダイスキ' && extraboxes[1].value == 'アイシテル')
 	{
 		return true;
 	}		

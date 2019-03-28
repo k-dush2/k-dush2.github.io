@@ -217,7 +217,7 @@ function check_2h_a(page)
 function check_6()
 {
 	var extraboxes = document.getElementsByName('s6textbox');
-	if (extraboxes[0].value == '大好き' && extraboxes[1].value == '愛してる' && extraboxes[0].value == 'ダイスキ' && extraboxes[1].value == 'アイシテル')
+	if (extraboxes[0].value == '大好き' && extraboxes[1].value == '愛してる' || extraboxes[0].value == 'ダイスキ' && extraboxes[1].value == 'アイシテル')
 	{
 		return true;
 	}		
