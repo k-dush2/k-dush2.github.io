@@ -198,9 +198,9 @@ function check_2h_a(page)
 {
 	var ans = '';
 	if (page == 0)
-		ans = '大好き';
+		ans = 'ダイスキ';
 	else
-		ans = '愛してる'
+		ans = 'アイシテル'
 	
 	var nexttext = document.getElementById('s2textbox');
 	if (nexttext.value.trim() == ans)
