@@ -1,0 +1,51 @@
+
+body{
+
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-color: lightskyblue;
+}
+.form{
+  text-align: center;
+}
+input{
+  font-size:40px;
+}
+
+img{
+  height:100%;
+  width:100%;
+}
+img.q2{
+  height:50%;
+  width:50%;
+}
+
+.buts{
+ position: relative;
+  height: 63px;
+  width: 315px;
+  top:16px;
+}
+a{
+  text-decoration: underline;
+}
+.hint{
+  font-size: 30px;
+}
+.box{
+  position:relative;
+  left:10%;
+  color: black;
+
+  margin-right: 300px;
+
+}
+div.box{
+    background: linear-gradient(90deg,aquamarine, lightskyblue);;
+}
+.hintp{
+text-align: center;
+font-size: 24px;
+}

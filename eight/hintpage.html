@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Loops</title>
+    <script src="script/loops.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/loops.css" />
+  </head>
+
+  <body>
+
+<div class="box">
+<a onclick="disp(1)" class="hint">１の問題のヒント</a>
+<span class="box">
+  <p id="hint1" style="display:none;"><br>ヒント１　２×３の長方形のピースは左下に入ります。　<a onclick="disp(2)">ヒント２を見る</a><br></p>
+    <p id="hint2" style="display:none;">ヒント２　②には「ウ」が入ります。</p>
+</div>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(4)" class="hint">２の問題のヒント</a>
+<span class="box">
+  <p id="hint4" style="display:none;"><br>ヒント１　Sから「グ」の方向へと進みます。　<a onclick="disp(5)">ヒント２を見る</a><br></p>
+    <p id="hint5" style="display:none;">ヒント２　左から３番目、一番下の「ク」から「ア」の方向へと進みます。</p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(7)" class="hint">３の問題のヒント</a>
+<span class="box">
+  <p id="hint7" style="display:none;"><br>ヒント１　イラスト１つがカタカナ１文字を表しています。　<a onclick="disp(8)">ヒント２を見る</a><br></p>
+    <p id="hint8" style="display:none;">ヒント２　１番下の段は「ダンゴ」「カイ」「フジサン」「ダイク」「モモタロウ」「クチ」です。</p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(10)" class="hint">４の問題のヒント</a>
+<span class="box">
+  <div id="hint10" style="display:none;"><br><a onclick="disp(11)">星４つの問題</a><br>
+        <div id="hint11" style="display:none;">ヒント１　１２個あるものです。　<a onclick="disp(3)">ヒント２を見る</a><br></div>
+        <div id="hint3" style="display:none;">ヒント２　英語にした時の頭文字が並んでいます。<br></div>
+  <a onclick="disp(12)">星３つの問題</a><br>
+  <p id="hint12" style="display:none;">左辺にはカタカナ、右辺には漢字が入ります。<br></p>
+  <a onclick="disp(9)">星２つの問題</a><br>
+  <p id="hint9" style="display:none;">ヒント１　？には同じ文字が入ります。　<a onclick="disp(100)">ヒント２を見る</a><br></p>
+  <p id="hint100" style="display:none;">ヒント２　４つの単語のうち、１つは色の名前、１つは科目になります。<br></p>
+  <a onclick="disp(6)">星１つの問題</a><br></div>
+  <p id="hint6" style="display:none;">ヒント１　よく見る表を使います。　<a onclick="disp(101)">ヒント２を見る</a><br></p>
+    <p id="hint101" style="display:none;">ヒント２　矢印はどこを指しているでしょうか。</p>
+
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(13)" class="hint">５の問題のヒント</a>
+<span class="box">
+  <p id="hint13" style="display:none;"><br>ヒント１　上から３番目の天秤から考えましょう。重さは1g〜9gまでしかありません。　<a onclick="disp(14)">ヒント２を見る</a><br></p>
+    <p id="hint14" style="display:none;">ヒント２　石の重さは「バ」「ヤ」「キ」の順で1gずつ増えています。</p>
+    <p id="hint15" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(16)" class="hint">６の問題のヒント</a>
+<span class="box">
+  <p id="hint16" style="display:none;"><br>この問題は、二つの紙を使います。</p>
+    <p id="hint17" style="display:none;">ヒント２　<a onclick="disp(18)">最後</a><br></p>
+    <p id="hint18" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(20)" class="hint">７の問題のヒント</a>
+<span class="box">
+  <p id="hint20" style="display:none;"><br>しっかりと画数を数えましょう。</p>
+    <p id="hint21" style="display:none;">ヒント２　<a onclick="disp(21)">最後</a><br></p>
+    <p id="hint22" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(23)" class="hint">８の問題のヒント</a>
+<span class="box">
+  <p id="hint23" style="display:none;"><br>ヒント１　「オ」のマスに飛、「ミ」のマスに銀が配置されます。　<a onclick="disp(24)">ヒント２を見る</a><br></p>
+    <p id="hint24" style="display:none;">ヒント２　２箇所に配置する駒があります。</p>
+    <p id="hint25" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(26)" class="hint">９の問題のヒント</a>
+<span class="box">
+  <p id="hint26" style="display:none;"><br>ヒント１　それぞれ元素記号を表しています。　<a onclick="disp(27)">ヒント２を見る</a><br></p>
+    <p id="hint27" style="display:none;">ヒント２　左から「アルミニウム」「インジウム」「アンチモン」「ヨウ素」「セシウム」「白金」です。</p>
+    <p id="hint28" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(29)" class="hint">０の問題のヒント</a>
+<span class="box">
+  <p id="hint29" style="display:none;"><br>ヒント１　左の四角は読む順番を表しています。　<a onclick="disp(30)">ヒント２を見る</a><br></p>
+    <p id="hint30" style="display:none;">ヒント２　右の四角は押す回数を表しています。　<a onclick="disp(31)">ヒント３を見る</a><br></p>
+    <p id="hint31" style="display:none;">ヒント３　この図はガラパゴス携帯電話を表しています。<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(32)" class="hint">解答用紙が埋まったら</a>
+<span class="box">
+  <p id="hint32" style="display:none;"><br>指示に従ってハサミを使いましょう。</p>
+    <p id="hint33" style="display:none;">１〜９の問題が変わりました。<br></p>
+    <p id="hint34" style="display:none;">ヒント３<br></p>
+</span>
+<br><br><br>
+<a href="hintpage2.html" class="hint">解答用紙の指示に従ったら</a>
+</div>
+  </body>
+
+</html>

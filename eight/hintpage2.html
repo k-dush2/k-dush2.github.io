@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Loops</title>
+    <script src="script/loops.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/loops.css" />
+  </head>
+
+  <body>
+<p class="hint">緑の線を切り終わったら</p>
+<div class="box">
+<a onclick="disp(1)" class="hint">１の問題のヒント</a>
+<span class="box">
+  <p id="hint1" style="display:none;"><br>ヒント１　④には「ヨ」が入ります。　<a onclick="disp(2)">ヒント２を見る</a><br></p>
+    <p id="hint2" style="display:none;">ヒント２　①には「ド」が入ります。</p>
+    <p id="hint3" style="display:none;">ヒント３<br></p>
+</div>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(4)" class="hint">２の問題のヒント</a>
+<span class="box">
+  <p id="hint4" style="display:none;"><br>緑の線を切る前の道を参考に、新たな道を探してみよう。</p>
+    <p id="hint5" style="display:none;">ヒント２　<a onclick="disp(6)">ヒント３を見る</a><br></p>
+    <p id="hint6" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(7)" class="hint">３の問題のヒント</a>
+<span class="box">
+  <p id="hint7" style="display:none;"><br>もう一度、この謎のルールを確認してみよう。</p>
+    <p id="hint8" style="display:none;">ヒント２　<a onclick="disp(9)">ヒント３を見る</a><br></p>
+    <p id="hint9" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(10)" class="hint">４の問題のヒント</a>
+<span class="box">
+  <p id="hint10" style="display:none;"><br>星の数が変わって、星０個の問題も変わりました。</p>
+    <p id="hint11" style="display:none;">ヒント２　<a onclick="disp(12)">ヒント３を見る</a><br></p>
+    <p id="hint12" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(13)" class="hint">５の問題のヒント</a>
+<span class="box">
+  <p id="hint13" style="display:none;"><br>ヒント１　「イ」は2gです。　<a onclick="disp(14)">ヒント２を見る</a><br></p>
+    <p id="hint14" style="display:none;">ヒント２　「バ」と「キ」は合わせて4gです。　<a onclick="disp(15)">ヒント３を見る</a><br></p>
+    <p id="hint15" style="display:none;">ヒント３　「ア」「キ」の二つと、「ツ」は釣り合います。<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(16)" class="hint">６の問題のヒント</a>
+<span class="box">
+  <p id="hint16" style="display:none;"><br>もう一度、重ね合わせましょう。</p>
+    <p id="hint17" style="display:none;">ヒント２　<a onclick="disp(18)">ヒント３を見る</a><br></p>
+    <p id="hint18" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(19)" class="hint">７の問題のヒント</a>
+<span class="box">
+  <p id="hint19" style="display:none;"><br>消せる漢字が変わります。</p>
+    <p id="hint21" style="display:none;">ヒント２　<a onclick="disp(21)">ヒント３を見る</a><br></p>
+    <p id="hint22" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(23)" class="hint">８の問題のヒント</a>
+<span class="box">
+  <p id="hint23" style="display:none;"><br>飛と銀を配置し直しましょう。</p>
+    <p id="hint24" style="display:none;">ヒント２　<a onclick="disp(25)">ヒント３を見る</a><br></p>
+    <p id="hint25" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(26)" class="hint">９の問題のヒント</a>
+<span class="box">
+  <p id="hint26" style="display:none;"><br>緑の線を切ることで、別の元素が現れました。</p>
+    <p id="hint27" style="display:none;">ヒント２　<a onclick="disp(28)">ヒント３を見る</a><br></p>
+    <p id="hint28" style="display:none;">ヒント３<br></p>
+</span>
+</div>
+<br>
+<div class="box">
+<a onclick="disp(32)" class="hint">解答用紙が埋まったら</a>
+<span class="box">
+  <p id="hint32" style="display:none;"><br>指示に従って今度は折りましょう。<br></p>
+    <p id="hint33" style="display:none;">１〜９の問題が変わりました。　<a href="hintpage2.html">新たな問題のヒント</a><br></p>
+    <p id="hint34" style="display:none;">ヒント３<br></p>
+</span>
+<br><br><br>
+<a href="hintpage3.html" class="hint">解答用紙の指示に従ったら</a>
+</div>
+  </body>
+
+</html>
