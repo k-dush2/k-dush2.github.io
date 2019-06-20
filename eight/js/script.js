@@ -1,4 +1,4 @@
-function check_1st(i){
+﻿function check_1st(i){
     var ans_katakana = ['レッド','ブルー','ネズミイロ','オレンジ','ムラサキ','キイロ','サクライロ','ミドリイロ'];
     var ans_hiragana = ['れっど','ぶるー','ねずみいろ','おれんじ','むらさき','きいろ','さくらいろ','みどりいろ'];
     var ans_kanji = ['レッド','ブルー','鼠色','オレンジ','紫','黄色','桜色','緑色'];
@@ -37,19 +37,19 @@ function check_1st_true(){
     }
 
     if(array_equal(flags,clear)){
-        window.location.href="segment_ESPER.html";
+        window.location.href="segment_NORMAL.html";
     }
     
 
 }
 
 function check_2nd(){
-    var correct = ["LEVELTWO","LEVEL TWO","LevelTwo","Level Two","leveltwo","level two"];
+    var correct = ["SOLUTION","solution","Solution"];
     var answer = document.getElementById("Segment").value;
 //    console.log(elem_in_array(answer,correct));
     if(elem_in_array(answer,correct)){
         alert("正解です");
-        window.location.href="slide_HARD.html";
+        window.location.href="slide_NORMAL.html";
     }else{
         alert("間違っています");
     }
@@ -77,6 +77,10 @@ function check_4th(){
     }else{
         alert("間違っています");
     }
+}
+
+function gotonextpage(){
+    window.location.href="puzzling.html"
 }
 
 function array_equal(a, b) {
