@@ -1,8 +1,8 @@
 ﻿function check_1st(i){
-    var ans_katakana = ['レッド','ブルー','ネズミイロ','オレンジ','ムラサキ','キイロ','サクライロ','ミドリイロ'];
-    var ans_hiragana = ['れっど','ぶるー','ねずみいろ','おれんじ','むらさき','きいろ','さくらいろ','みどりいろ'];
-    var ans_kanji = ['レッド','ブルー','鼠色','オレンジ','紫','黄色','桜色','緑色'];
-    var ans_kanjimajiri = ['レッド','ブルー','ねずみ色','オレンジ','紫','黄色','さくら色','みどり色'];
+    var ans_katakana = ['レッド','ブルー','ミドリイロ','オレンジ','ムラサキ','キイロ','サクライロ','ネズミイロ'];
+    var ans_hiragana = ['れっど','ぶるー','みどりいろ','おれんじ','むらさき','きいろ','さくらいろ','ねずみいろ'];
+    var ans_kanji = ['レッド','ブルー','緑色','オレンジ','紫','黄色','桜色','鼠色'];
+    var ans_kanjimajiri = ['レッド','ブルー','みどり色','オレンジ','紫','黄色','さくら色','ねずみ色'];
     var textid ="Color" +  String(i);
     var color = document.getElementById(textid).value;
     //alert(color);
@@ -24,10 +24,10 @@
 function check_1st_true(){
     var flags = [false,false,false,false,false,false,false,false];
     var clear = [true,true,true,true,true,true,true,true];
-    var ans_katakana = ['レッド','ブルー','ネズミイロ','オレンジ','ムラサキ','キイロ','サクライロ','ミドリイロ'];
-    var ans_hiragana = ['れっど','ぶるー','ねずみいろ','おれんじ','むらさき','きいろ','さくらいろ','みどりいろ'];
-    var ans_kanji = ['レッド','ブルー','鼠色','オレンジ','紫','黄色','桜色','緑色'];
-    var ans_kanjimajiri = ['レッド','ブルー','ねずみ色','オレンジ','紫','黄色','さくら色','みどり色'];
+    var ans_katakana = ['レッド','ブルー','ミドリイロ','オレンジ','ムラサキ','キイロ','サクライロ','ネズミイロ'];
+    var ans_hiragana = ['れっど','ぶるー','みどりいろ','おれんじ','むらさき','きいろ','さくらいろ','ねずみいろ'];
+    var ans_kanji = ['レッド','ブルー','緑色','オレンジ','紫','黄色','桜色','鼠色'];
+    var ans_kanjimajiri = ['レッド','ブルー','みどり色','オレンジ','紫','黄色','さくら色','ねずみ色'];
     for(i=0;i<8;i++){
         var textid ="Color" +  String(i);
         var color = document.getElementById(textid).value;
