@@ -37,7 +37,7 @@ function check_1st_true(){
     }
 
     if(array_equal(flags,clear)){
-        window.location.href="segment_NORMAL.html";
+        window.location.href="2segment.html";
     }
     
 
@@ -49,25 +49,42 @@ function check_2nd(){
 //    console.log(elem_in_array(answer,correct));
     if(elem_in_array(answer,correct)){
         alert("正解です");
-        window.location.href="slide_NORMAL.html";
-    }else{
-        alert("間違っています");
-    }
-}
-        
-function check_3rd(){
-    var correct = ["無限","むげん","ムゲン"];
-    var answer = document.getElementById("Slide").value;
-//    console.log(elem_in_array(answer,correct));
-    if(elem_in_array(answer,correct)){
-        alert("正解です");
-        window.location.href="pilling.html";
+        window.location.href="3slide.html";
     }else{
         alert("間違っています");
     }
 }
 
+
+function check_3rd(){
+    var correct = ["news","News","NEWS"];
+    var answer = document.getElementById("Put").value;
+//    console.log(elem_in_array(answer,correct));
+    if(elem_in_array(answer,correct)){
+        alert("正解です");
+        window.location.href="4puzzling.html";
+    }else{
+        alert("間違っています");
+    }
+}
+        
 function check_4th(){
+    var correct = ["無限","むげん","ムゲン"];
+    var extra = ["UNLIMITED","unlimited","Unlimited"];
+    var answer = document.getElementById("Slide").value;
+//    console.log(elem_in_array(answer,correct));
+    if(elem_in_array(answer,correct)){
+        alert("正解です");
+        window.location.href="5pilling.html";
+    }else if(elem_in_array(answer,extra)){
+        alert("正解です");
+        window.location.href="clearpage.html"
+    }else{
+        alert("間違っています")
+    }
+}
+
+function check_5th(){
     var correct = ["UNLIMITED","unlimited","Unlimited"];
     var answer = document.getElementById("Pill").value;
 //    console.log(elem_in_array(answer,correct));
@@ -79,9 +96,6 @@ function check_4th(){
     }
 }
 
-function gotonextpage(){
-    window.location.href="puzzling.html"
-}
 
 function array_equal(a, b) {
     if (!Array.isArray(a))    return false;

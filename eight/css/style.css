@@ -1,5 +1,199 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 img{
     border: 0;
+}
+
+/* input,button ,textarea{ */
+    /* margin: 0; */
+    /* padding: 0; */
+    /* background: none; */
+    /* border: none; */
+    /* border-radius: 0; */
+    /* outline: none; */
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    /* appearance: none; */
+
+/* } */
+
+/* #colors main img.screen{ */
+    /* margin: 0; */
+    /* padding: 0;  */
+    /* position: absolute; */
+
+/* } */
+
+#colors main span#headline{
+    margin:0;
+    padding:0;
+    
+
+}
+
+#colors main form input[type="text"] {
+    
+    height: 22px;
+}
+
+#colors main form input[type="text"]#Color0{
+    
+    width: 76px;
+    position: absolute;
+    top: 371px;
+    left: 88px;
+}
+
+#colors main form input[type="text"]#Color1{
+    
+    width: 77px;
+    position: absolute;
+    top: 371px;
+    left: 190px;
+}
+#colors main form input[type="text"]#Color2{
+    
+    width: 78px;
+    position: absolute;
+    top: 371px;
+    left: 317px;
+}
+#colors main form input[type="text"]#Color3{
+    
+    width: 76px;
+    position: absolute;
+    top: 371px;
+    left: 459px;
+}
+#colors main form input[type="text"]#Color4{
+    
+    width: 77px;
+    position: absolute;
+    top: 371px;
+    left: 587px;
+}
+#colors main form input[type="text"]#Color5{
+    
+    width: 76px;
+    position: absolute;
+    top: 371px;
+    left: 703px;
+}
+#colors main form input[type="text"]#Color6{
+    
+    width: 76px;
+    position: absolute;
+    top: 371px;
+    left: 835px;
+}
+#colors main form input[type="text"]#Color7{
+    
+    width: 76px;
+    position: absolute;
+    top: 371px;
+    left: 995px;
+}
+
+#colors main form input[type="button"]{
+    
+    height: 17px;
+    width: 76px;
+    position: absolute;
+}
+
+#colors main form input[type="button"]#Button0{
+
+    top: 424px;
+    left: 91px;
+}
+
+#colors main form input[type="button"]#Button1{
+
+    top: 424px;
+    left: 192px;
+}
+
+#colors main form input[type="button"]#Button2{
+
+    top: 424px;
+    left: 320px;
+}
+
+#colors main form input[type="button"]#Button3{
+
+    top: 424px;
+    left: 462px;
+}
+
+#colors main form input[type="button"]#Button4{
+
+    top: 424px;
+    left: 590px;
+}
+
+#colors main form input[type="button"]#Button5{
+
+    top: 424px;
+    left: 707px;
+}
+
+#colors main form input[type="button"]#Button6{
+
+    top: 424px;
+    left: 837px;
+}
+
+#colors main form input[type="button"]#Button7{
+
+    top: 424px;
+    left: 1000px;
+}
+
+#colors main img.send_button{
+    
+
+}
+
+#pill main img#icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#pill main video#movie{
+    position: relative;
+    top: 130px;
+    left: -30px;
+}
+
+#pill main img#expla{
+    position: relative;
+    top: 130px;
+    left: 0;
+}
+
+#pill main form{
+    position: relative;
+    top: 130px;
+}
+
+body#ex main p a img.button{
+    position: relative;
+    top:4890px;
+    left:650px;
+
+}
+
+/* body#ex main p a img.button:hover{ */
+/*  */
+    /* opacity:0.5; */
+	/* cursor: pointer; */
+/* } */
+
+/* body#ex main p a img.button:active{ */
+/* position: relative; */
+	/* top: 3px; */
+/* } */
+body#ex main p img.background{
+    position:absolute;
 }
