@@ -32,3 +32,17 @@ p {
   padding: 5px;
   margin: 5px;
 }
+
+.gath1{
+  font-weight: bold;
+  font-size: x-large
+}
+
+.gath2{
+  font-weight: bold;
+  font-size: large;
+}
+
+.gath3{
+  font-size: x-large;
+}
