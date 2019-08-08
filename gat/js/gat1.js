@@ -95,28 +95,52 @@ window.onload = function(){
         }
     
     
-        var menu=document.getElementById("menu");
-        var f=0;
-        menu.addEventListener("click",()=>{
-          if(f===0){
-            document.getElementById("map").style.width="100vw";
-            document.getElementById("imap").style.width="90vw";
-            document.getElementById("imap").style.height="80vh";
-            menu.style.right="88vw";
-            menu.style.background="url(images/goCom.png) right top no-repeat";
-            menu.style.backgroundSize="contain";
-            f=1;
-          }
-          else if(f===1){
-            document.getElementById("map").style.width="12vw";
-            document.getElementById("imap").style.width="0vw";
-            document.getElementById("imap").style.height="0vh";
-            menu.style.right="0vw";
-            menu.style.background="url(images/goMap.png) right top no-repeat";
-            menu.style.backgroundSize="contain";
-            f=0;
-          }
-      },false)
       },false)
     }
-}
+    var menu=document.getElementById("menu");
+    var f=0;
+    menu.addEventListener("click",()=>{
+      if(f===0){
+        document.getElementById("map").style.width="100vw";
+        document.getElementById("imap").style.width="100vw";
+        document.getElementById("imap").style.height="80vh";
+        menu.style.right="88vw";
+        menu.style.background="url(images/goCom.png) right top no-repeat";
+        menu.style.backgroundSize="contain";
+        f=1;
+      }
+      else if(f===1){
+        document.getElementById("map").style.width="12vw";
+        document.getElementById("imap").style.width="0vw";
+        document.getElementById("imap").style.height="0vh";
+        menu.style.right="0vw";
+        menu.style.background="url(images/goMap.png) right top no-repeat";
+        menu.style.backgroundSize="contain";
+        f=0;
+      }
+    },false)
+
+    document.onkeypress = enter;
+    function enter(){
+      if( window.event.keyCode == 13 ){
+        return false;
+      }
+    }
+    const mrf=document.getElementsByClassName("mrf");
+    const mrl=document.getElementsByClassName("mrl");
+    document.getElementById("sub").addEventListener("click",function(){
+      let ans=document.getElementById("ans").value;
+      if(ans=="under"){
+          mrf[0].style.width="25%";
+          mrl[0].style.width="25%";
+          mrf[1].style.width="45%";
+          mrl[1].style.width="5%";
+          mrf[2].style.width="25%";
+          mrl[2].style.width="25%";
+          mrf[3].style.width="35%";
+          mrl[3].style.width="15%";
+          mrf[4].style.width="45%";
+          mrl[4].style.width="5%";
+      }
+    },false)
+  }

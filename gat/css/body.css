@@ -3,7 +3,7 @@ body{
 }
 
 #main{
-    background:#000 url("../images/bg.jpg") no-repeat;
+    /* background:#000 url("../images/bg.jpg") no-repeat; */
     background-position: 50% 0%;
     background-size: contain;
     height:100vh;
@@ -38,6 +38,15 @@ body{
     width:70vw;
     height:45vw;
     background-color:#222;
+}
+#bgmov{
+    background-color:black;
+    position: absolute;
+    top:0vh;
+    left:0vw;
+    width:100vw;
+    height:100vh;
+    z-index:-5;
 }
 
 #map{

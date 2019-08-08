@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <title>gat home</title>
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/pop.css" rel="stylesheet">
-    <link href="css/menu.css" rel="stylesheet">
-    <link href="css/body.css" rel="stylesheet">
-    <script type="text/javascript" src="js/gat1.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <title>gat home</title>
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/pop.css" rel="stylesheet">
+        <link href="css/menu.css" rel="stylesheet">
+        <link href="css/body.css" rel="stylesheet">
+        <script type="text/javascript" src="js/gat1.js"></script>
+    </head>
+    <body>
+    <video id="bgmov" src="./images/guyicon.mp4" poster="./images/guyconbg.png" autoplay muted loop></video>
     <button id="goFS">Go fullscreen</button>
     <div id="main">
         <div id="sound">
@@ -20,10 +21,7 @@
                 <input type="button" class="but" value="4th">
             </div>
             <div class="bt">
-                <input type="button" class="but" id="btn5">
-                <input type="button" class="but" id="btn6">
-                <input type="button" class="but" id="btn7">
-                <input type="button" class="but" id="btn8">
+                <input type="button" class="but" value="last">
             </div>
         </div>
     </div>
@@ -43,10 +41,10 @@
             <div class="mov">
                 <!-- <audio src="../voices/test.wav"></audio> -->
                 <audio src="voices/1st.mp3"></audio>
-                <audio src="voices/1st.mp3"></audio>
+                <audio src="voices/2nd.mp3"></audio>
                 <audio src="voices/3rd.mp3"></audio>
-                <audio src="voices/4th半分.mp3"></audio>
-                <audio src="voices/1st.mp3"></audio>
+                <audio src="voices/4th.mp3"></audio>
+                <audio src="voices/last.mp3"></audio>
                 <audio src="voices/1st.mp3"></audio>
                 <audio src="voices/1st.mp3"></audio>
                 <audio src="voices/1st.mp3"></audio>
@@ -64,10 +62,63 @@
                     </div>
                 </div>
             </div>
+    </div>
+    <div id="map">
+        <div id="imap">
+            <div id="map0" class="row">
+                <div class="sq"></div>
+            </div>
+            <div id="map1" class="row">
+                <div class="mrf"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="mrl"></div>
+            </div>
+            <div id="map2" class="row">
+                <div class="mrf"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="mrl"></div>
+            </div>
+            <div id="map3" class="row">
+                <div class="mrf"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="mrl"></div>
+            </div>
+            <div id="map4" class="row">
+                <div class="mrf"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="mrl"></div>
+            </div>
+            <div id="map5" class="row">
+                <div class="mrf"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="sq"></div>
+                <div class="mrl"></div>
+            </div>
+            <form class="raw">
+                <input type="text" id="ans">
+                <input type="button" id="sub" value="送信">
+            </form>
         </div>
-        <div id="map">
-            <div id="imap"></div>
-        </div>
-        <button id="menu"></button>
+    </div>
+    <button id="menu"></button>
     </body>
     </html>
