@@ -2,9 +2,9 @@ window.onload = function(){
   // var mov=document.getElementsByClassName("mov");
   // var start=document.getElementsByClassName("start");
   var goFS=document.getElementById("goFS");
-  // var testAudio=document.getElementById("testAudio");
+  // var testaudio[i]=document.getElementById("testaudio[i]");
   var main=document.getElementById("main");
-  // const audio = document.getElementsByTagName("audio")[0];
+  // const audio[i] = document.getElementsByTagName("audio[i]")[0];
   goFS.addEventListener("click",function(){
     document.body.requestFullscreen();
     goFS.classList.add("hidden");
@@ -14,56 +14,74 @@ window.onload = function(){
   var playButton = document.getElementById("play")
   var stopButton = document.getElementById("stop")
   var btn=document.getElementsByClassName("but");
+  let audio = document.getElementsByTagName("audio");
     for(let i=0;i<btn.length;i++){
+      let playB =function () {
+        if (audio[i].paused) {
+          audio[i].play()
+          play.style.backgroundImage = "url(images/pause.png)"
+        } else {
+          audio[i].pause()
+          play.style.backgroundImage = "url(images/start.png)"
+        }
+      }
+      var stopB =function () {
+        audio[i].pause()
+        audio[i].currentTime = 0
+        play.style.backgroundImage = "url(images/start.png)"
+      }
       btn[i].addEventListener("click",function(){
-        let audio = document.getElementsByTagName("audio")[i];
         pop1.classList.remove('hidden');
         main.classList.add("blur");
-        audio.play();
-        audio.pause();
-        document.getElementById('current').innerHTML = playTime(Math.floor(audio.currentTime))
-        document.getElementById('duration').innerHTML = playTime(Math.round(audio.duration))
+        audio[i].play();
+        audio[i].pause();
+        document.getElementById('current').innerHTML = playTime(Math.floor(audio[i].currentTime))
+        document.getElementById('duration').innerHTML = playTime(Math.round(audio[i].duration))
         exit.addEventListener("click",function(){
           pop1.classList.add('hidden');
           main.classList.remove("blur");
-          audio.pause();
+          audio[i].pause();
           play.style.backgroundImage = "url(images/start.png)"
-          audio.currentTime = 0
+          audio[i].currentTime = 0
+          playButton.removeEventListener('click',playB)
+          stopButton.removeEventListener('click',stopB)
+      
+      
+          document.getElementById('seekbar').removeEventListener("click", (e) => {
+            const duration = Math.round(audio[i].duration)
+            if(!isNaN(duration)){
+              const mouse = e.pageX
+              const element = document.getElementById('seekbar')
+              const rect = element.getBoundingClientRect()
+              const position = rect.left + window.pageXOffset
+              const offset = mouse - position
+              const width = rect.right - rect.left
+              audio[i].currentTime = Math.round(duration * (offset / width))
+            }
+          })
         },false);
     
-        playButton.addEventListener('click', () => {
-          if (audio.paused) {
-            audio.play()
-            play.style.backgroundImage = "url(images/pause.png)"
-          } else {
-            audio.pause()
-            play.style.backgroundImage = "url(images/start.png)"
-          }
-        })
-        stopButton.addEventListener('click', () => {
-          audio.pause()
-          audio.currentTime = 0
-          play.style.backgroundImage = "url(images/start.png)"
-        })
+        playButton.addEventListener('click',playB)
+        stopButton.addEventListener('click',stopB)
     
-        audio.addEventListener("timeupdate", (e) => {
-          const current = Math.floor(audio.currentTime)
-          const duration = Math.round(audio.duration)
+        audio[i].addEventListener("timeupdate", (e) => {
+          const current = Math.floor(audio[i].currentTime)
+          const duration = Math.round(audio[i].duration)
           if(!isNaN(duration)){
             document.getElementById('current').innerHTML = playTime(current)
             document.getElementById('duration').innerHTML = playTime(duration)
-            const percent = Math.round((audio.currentTime/audio.duration)*1000)/10
+            const percent = Math.round((audio[i].currentTime/audio[i].duration)*1000)/10
             document.getElementById('seekbar').style.backgroundSize = percent + '%'
           }
         })
     
-        audio.addEventListener("ended",() => {
+        audio[i].addEventListener("ended",() => {
           play.style.backgroundImage = "url(images/start.png)"
           document.getElementById('seekbar').style.backgroundSize = 0;
         })
     
         document.getElementById('seekbar').addEventListener("click", (e) => {
-          const duration = Math.round(audio.duration)
+          const duration = Math.round(audio[i].duration)
           if(!isNaN(duration)){
             const mouse = e.pageX
             const element = document.getElementById('seekbar')
@@ -71,7 +89,7 @@ window.onload = function(){
             const position = rect.left + window.pageXOffset
             const offset = mouse - position
             const width = rect.right - rect.left
-            audio.currentTime = Math.round(duration * (offset / width))
+            audio[i].currentTime = Math.round(duration * (offset / width))
           }
         })
     
