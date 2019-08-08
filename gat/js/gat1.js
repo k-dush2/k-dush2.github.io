@@ -45,20 +45,6 @@ window.onload = function(){
           audio[i].currentTime = 0
           playButton.removeEventListener('click',playB)
           stopButton.removeEventListener('click',stopB)
-      
-      
-          document.getElementById('seekbar').removeEventListener("click", (e) => {
-            const duration = Math.round(audio[i].duration)
-            if(!isNaN(duration)){
-              const mouse = e.pageX
-              const element = document.getElementById('seekbar')
-              const rect = element.getBoundingClientRect()
-              const position = rect.left + window.pageXOffset
-              const offset = mouse - position
-              const width = rect.right - rect.left
-              audio[i].currentTime = Math.round(duration * (offset / width))
-            }
-          })
         },false);
     
         playButton.addEventListener('click',playB)
