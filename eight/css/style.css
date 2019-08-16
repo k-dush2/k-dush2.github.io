@@ -40,34 +40,60 @@ img.letter{
     top:200px;
 }
 
-#num1{
+
+div.bigblack{
+    width:5%;
+    max-width:50px;
+    background: black;
+    position:absolute;
+}
+div.bigblack:before{
+    content:"";
+    display:block;
+    padding-bottom:100%;
+}
+div.bigwhite{
+    width:4.8%;
+    max-width:48px;
+    background:white;
+    border:1px solid black;
+    position:absolute;
+}
+div.bigwhite:before{
+    content:"";
+    display:block;
+    padding-bottom:100%;
+}
+
+.num1{
     left:8%;
 }
 
-#num2{
+.num2{
     left:17%;
 }
 
-#num3{
+.num3{
     left:27%;
     
 }
-#num4{
+.num4{
     left:37%;
+
 }
-#num5{
-    left:46%;
+.num5{
+   left:46%;
+
+}
+.num6{
+   left:56%;
     
 }
-#num6{
-    left:56%;
-    
-}
-#num7{
+.num7{
     left:65%;
     
 }
-#num8{
+.num8{
     left:74%;
 }
 
@@ -332,7 +358,7 @@ div.answerletter:before{
 }
 
 
-div.textbox input{
+#colors main div.textbox input{
     width:7%;
     height:16px;
     max-width:120px;
@@ -375,7 +401,7 @@ div.textbox input{
     
 }
 
-img.answeringbutton{
+#colors  main img.answeringbutton{
     width: 7%;
     max-width: 120px;
     min-width:40px;
@@ -416,12 +442,12 @@ img.answeringbutton{
     left:74%;
 }
 
-img.answeringbutton:hover{
+#colors main img.answeringbutton:hover{
     opacity:0.5;
     cursor: pointer;
 }
 
-img.answeringbutton:active{
+#colors main img.answeringbutton:active{
     top:433px;
 }
 
@@ -429,6 +455,64 @@ img.phaselogo{
     position: relative;
 }
 
+
+/* ここから2nd */
+
+img.answeringbutton{
+    width: 7%;
+    max-width: 120px;
+    min-width:40px;
+    height:auto;
+    position:absolute;
+}
+
+
+img.answeringbutton:hover{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+img.answeringbutton.under:active{
+    top:553px;
+}
+
+
+.ans{
+    width:25%;
+    height:16px;
+    max-width:500px;
+    min-width:100px;
+    border:double;
+    position:absolute;
+    top:500px;
+}
+
+
+
+.right{
+    right:5%;
+}
+
+
+.up{
+    top:350px;
+}
+
+.down{
+    top:400px;
+}
+
+.under{
+    top:550px;
+}
+
+.arrow{
+    width:75%;
+    height:auto;
+    position: absolute;
+    z-index: -50;
+    top:400px;
+}
 
 
 /*
