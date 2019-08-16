@@ -9,11 +9,7 @@
     
     if((color === ans_hiragana[i] )|| (color ===　ans_kanji[i]) || (color ===　ans_katakana[i]) || (color ===　ans_kanjimajiri[i])){
 
-        alert("正解です");
-
-    }else{
-    
-        alert("間違っています");
+        display_ans(i);
 
     }
 
@@ -40,6 +36,115 @@ function check_1st_true(){
         window.location.href="2segment.html";
     }
     
+
+}
+
+function display_ans(i){
+    
+    if(i === 0){
+        r1 = document.getElementById("ared-1");
+        r2 = document.getElementById("ared-2");
+        r3 = document.getElementById("ared-3");
+
+        r1.innerHTML = "レ";
+        r2.innerHTML = "ッ";
+        r3.innerHTML = "ド";
+    }
+
+    
+    if(i === 1){
+        b1 = document.getElementById("ablue-1");
+        b2 = document.getElementById("ablue-2");
+        b3 = document.getElementById("ablue-3");
+
+        b1.innerHTML = "ブ";
+        b2.innerHTML = "ル";
+        b3.innerHTML = "ー";
+    }
+
+    if(i === 2){
+        g1 = document.getElementById("agreen-1");
+        g2 = document.getElementById("agreen-2");
+        g3 = document.getElementById("agreen-3");
+        g4 = document.getElementById("agreen-4");
+        g5 = document.getElementById("agreen-5");
+
+
+        g1.innerHTML = "ミ";
+        g2.innerHTML = "ド";
+        g3.innerHTML = "リ";
+        g4.innerHTML = "イ";
+        g5.innerHTML = "ロ";
+    }
+
+    
+    if(i === 3){
+        o1 = document.getElementById("aorange-1");
+        o2 = document.getElementById("aorange-2");
+        o3 = document.getElementById("aorange-3");
+        o4 = document.getElementById("aorange-4");
+
+
+        o1.innerHTML = "オ";
+        o2.innerHTML = "レ";
+        o3.innerHTML = "ン";
+        o4.innerHTML = "ジ";
+    }
+
+    
+    if(i === 4){
+        m1 = document.getElementById("amurasaki-1");
+        m2 = document.getElementById("amurasaki-2");
+        m3 = document.getElementById("amurasaki-3");
+        m4 = document.getElementById("amurasaki-4");
+
+
+        m1.innerHTML = "ム";
+        m2.innerHTML = "ラ";
+        m3.innerHTML = "サ";
+        m4.innerHTML = "キ";
+    }
+
+    
+    if(i === 5){
+        y1 = document.getElementById("akiiro-1");
+        y2 = document.getElementById("akiiro-2");
+        y3 = document.getElementById("akiiro-3");
+
+        y1.innerHTML = "キ";
+        y2.innerHTML = "イ";
+        y3.innerHTML = "ロ";
+    }
+    
+    if(i === 6){
+        s1 = document.getElementById("asakurairo-1");
+        s2 = document.getElementById("asakurairo-2");
+        s3 = document.getElementById("asakurairo-3");
+        s4 = document.getElementById("asakurairo-4");
+        s5 = document.getElementById("asakurairo-5");
+
+
+        s1.innerHTML = "サ";
+        s2.innerHTML = "ク";
+        s3.innerHTML = "ラ";
+        s4.innerHTML = "イ";
+        s5.innerHTML = "ロ";
+    }
+
+    if(i === 7){
+        g1 = document.getElementById("anezumiiro-1");
+        g2 = document.getElementById("anezumiiro-2");
+        g3 = document.getElementById("anezumiiro-3");
+        g4 = document.getElementById("anezumiiro-4");
+        g5 = document.getElementById("anezumiiro-5");
+
+
+        g1.innerHTML = "ネ";
+        g2.innerHTML = "ズ";
+        g3.innerHTML = "ミ";
+        g4.innerHTML = "イ";
+        g5.innerHTML = "ロ";
+    }
 
 }
 

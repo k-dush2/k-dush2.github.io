@@ -27,132 +27,467 @@ img{
 #colors main span#headline{
     margin:0;
     padding:0;
-    
 
 }
 
-#colors main form input[type="text"] {
-    
-    height: 22px;
+
+img.letter{
+    width:1%;
+    height:auto;
+    max-width:60px;
+    min-width:40px;
+    position:absolute;
+    top:200px;
 }
 
-#colors main form input[type="text"]#Color0{
-    
-    width: 76px;
-    position: absolute;
-    top: 371px;
-    left: 88px;
+#num1{
+    left:8%;
 }
 
-#colors main form input[type="text"]#Color1{
-    
-    width: 77px;
-    position: absolute;
-    top: 371px;
-    left: 190px;
-}
-#colors main form input[type="text"]#Color2{
-    
-    width: 78px;
-    position: absolute;
-    top: 371px;
-    left: 317px;
-}
-#colors main form input[type="text"]#Color3{
-    
-    width: 76px;
-    position: absolute;
-    top: 371px;
-    left: 459px;
-}
-#colors main form input[type="text"]#Color4{
-    
-    width: 77px;
-    position: absolute;
-    top: 371px;
-    left: 587px;
-}
-#colors main form input[type="text"]#Color5{
-    
-    width: 76px;
-    position: absolute;
-    top: 371px;
-    left: 703px;
-}
-#colors main form input[type="text"]#Color6{
-    
-    width: 76px;
-    position: absolute;
-    top: 371px;
-    left: 835px;
-}
-#colors main form input[type="text"]#Color7{
-    
-    width: 76px;
-    position: absolute;
-    top: 371px;
-    left: 995px;
+#num2{
+    left:17%;
 }
 
-#colors main form input[type="button"]{
+#num3{
+    left:27%;
+    
+}
+#num4{
+    left:37%;
+}
+#num5{
+    left:46%;
+    
+}
+#num6{
+    left:56%;
+    
+}
+#num7{
+    left:65%;
+    
+}
+#num8{
+    left:74%;
+}
+
+div.whitesquare{
+    width:1.7%;
+    max-width:20px;
+    background:white;
+    border:1px solid black;
+    position:absolute;
+    top:283px;
+}
+div.whitesquare:before{
+    content:"";
+    display:block;
+    padding-bottom:100%;
+}
+
+div.blacksquare{
+    width:1.9%;
+    max-width:20px;
+    background: black;
+    position:absolute;
+    top:283px;
+}
+div.blacksquare:before{
+    content:"";
+    display:block;
+    padding-bottom:100%;
+}
+
+#red-r{
+    left:5.8%;
+}
+#red-e{
+    left:8%;
+}
+#red-d{
+    left:10.2%;
+}
+/*
+.red{
+    left:5.3%;
+}*/
+#blue-b{
+    left:13%;
+}
+#blue-lu{
+    left:15.2%;
+}
+#blue-e{
+    left:17.4%
+}
+
+#green-g{
+    left:20.3%
+}
+#green-r{
+    left:22.5%;
+}
+#green-e{
+    left:24.7%
+}
+#green-e2{
+    left:26.9%
+}
+#green-n{
+    left:29.1%;
+}
+
+#orange-o{
+    left:34.8%;
+}
+#orange-ra{
+    left:36.9%;
+}
+#orange-n{
+    left:39%;
+}
+#orange-ge{
+    left:41.1%;
+}
+
+#murasaki-mu{
+    left:43.9%;
+}
+#murasaki-ra{
+    left:46%;
+}
+#murasaki-sa{
+    left:48.1%;
+}
+#murasaki-ki{
+    left:50.2%;
+}
+
+#kiiro-ki{
+    left:54.9%;
+}
+#kiiro-i{
+    left:57%;
+}
+#kiiro-ro{
+    left:59.1%;
+}
+
+#sakurairo-sa{
+    left:61.9%;
+}
+#sakurairo-ku{
+    left:64%;
+}
+#sakurairo-ra{
+    left:66.1%;
+}
+#sakurairo-i{
+    left:68.1%;
+}
+#sakurairo-ro{
+    left:70.2%;
+}
+
+#nezumiiro-ne{
+    left:72.5%;
+}
+#nezumiiro-zu{
+    left:74.6%;
+}
+#nezumiiro-mi{
+    left:76.7%;
+}
+#nezumiiro-i{
+    left:78.8%;
+}
+#nezumiiro-ro{
+    left:80.9%;
+}
+
+div.answerletter{
+    position:absolute;
+    z-index: 1;
+    top:265px;
+    width:1.9%;
+    max-width:20px;
+}
+div.answerletter:before{
+    content:"";
+    display:block;
+    padding-bottom:100%;
+}
+
+
+#ared-1{
+    left:5.8%;
+}
+#ared-2{
+    left:8%;
+}
+#ared-3{
+    left:10.2%;
+}
+
+
+#ablue-1{
+    left:13%;
+}
+#ablue-2{
+    left:15.2%;
+}
+#ablue-3{
+    left:17.4%
+}
+
+#agreen-1{
+    left:20.3%
+}
+#agreen-2{
+    left:22.5%;
+}
+#agreen-3{
+    left:24.7%
+}
+#agreen-4{
+    left:26.9%
+}
+#agreen-5{
+    left:29.1%;
+}
+
+#aorange-1{
+    left:34.8%;
+}
+#aorange-2{
+    left:36.9%;
+}
+#aorange-3{
+    left:39%;
+}
+#aorange-4{
+    left:41.1%;
+}
+
+#amurasaki-1{
+    left:43.9%;
+}
+#amurasaki-2{
+    left:46%;
+}
+#amurasaki-3{
+    left:48.1%;
+}
+#amurasaki-4{
+    left:50.2%;
+}
+
+#akiiro-1{
+    left:54.9%;
+}
+#akiiro-2{
+    left:57%;
+}
+#akiiro-3{
+    left:59.1%;
+}
+
+#asakurairo-1{
+    left:61.9%;
+}
+#asakurairo-2{
+    left:64%;
+}
+#asakurairo-3{
+    left:66.1%;
+}
+#asakurairo-4{
+    left:68.1%;
+}
+#asakurairo-5{
+    left:70.2%;
+}
+
+#anezumiiro-1{
+    left:72.5%;
+}
+#anezumiiro-2{
+    left:74.6%;
+}
+#anezumiiro-3{
+    left:76.7%;
+}
+#anezumiiro-4{
+    left:78.8%;
+}
+#anezumiiro-5{
+    left:80.9%;
+}
+
+.black{
+    color: black;
+}
+.white{
+    color:white;
+}
+
+
+div.textbox input{
+    width:7%;
+    height:16px;
+    max-width:120px;
+    min-width:40px;
+    border:double;
+    position:absolute;
+    top:400px;
+}
+
+#Color0{
+    left:8%;
+}
+
+#Color1{
+    left:17%;
+}
+
+#Color2{
+    left:27%;
+    
+}
+#Color3{
+    left:37%;
+    
+}
+#Color4{
+    left:46%;
+    
+}
+#Color5{
+    left:56%;
+    
+}
+#Color6{
+    left:65%;
+    
+}
+#Color7{
+    left:74%;
+    
+}
+
+img.answeringbutton{
+    width: 7%;
+    max-width: 120px;
+    min-width:40px;
+    height:auto;
+    position:absolute;
+    top:430px
+}
+
+#sed1{
+    left:7.5%;
+}
+
+#sed2{
+    left:17%;
+}
+
+#sed3{
+    left:27%;
+    
+}
+#sed4{
+    left:37%;
+    
+}
+#sed5{
+    left:46%;
+    
+}
+#sed6{
+    left:56%;
+    
+}
+#sed7{
+    left:65%;
+    
+}
+#sed8{
+    left:74%;
+}
+
+img.answeringbutton:hover{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+img.answeringbutton:active{
+    top:433px;
+}
+
+img.phaselogo{
+    position: relative;
+}
+
+
+
+/*
+#colors main input[type="button"]{
     
     height: 17px;
     width: 76px;
     position: absolute;
 }
 
-#colors main form input[type="button"]#Button0{
+#colors main input[type="button"]#Button0{
 
     top: 424px;
     left: 91px;
 }
 
-#colors main form input[type="button"]#Button1{
+#colors main input[type="button"]#Button1{
 
     top: 424px;
     left: 192px;
 }
 
-#colors main form input[type="button"]#Button2{
+#colors main input[type="button"]#Button2{
 
     top: 424px;
     left: 320px;
 }
 
-#colors main form input[type="button"]#Button3{
+#colors main input[type="button"]#Button3{
 
     top: 424px;
     left: 462px;
 }
 
-#colors main form input[type="button"]#Button4{
+#colors main input[type="button"]#Button4{
 
     top: 424px;
     left: 590px;
 }
 
-#colors main form input[type="button"]#Button5{
+#colors main input[type="button"]#Button5{
 
     top: 424px;
     left: 707px;
 }
 
-#colors main form input[type="button"]#Button6{
+#colors main input[type="button"]#Button6{
 
     top: 424px;
     left: 837px;
 }
 
-#colors main form input[type="button"]#Button7{
+#colors main input[type="button"]#Button7{
 
     top: 424px;
     left: 1000px;
-}
+}*/
 
-#colors main img.send_button{
-    
 
-}
 
 #pill main img#icon{
     position: absolute;
@@ -196,8 +531,4 @@ body#ex main p a img.button{
 /* } */
 body#ex main p img.background{
     position:absolute;
-}
-
-.answeringbutton{
-    
 }
