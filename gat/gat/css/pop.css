@@ -1,0 +1,108 @@
+
+
+#exit{
+    position:absolute;
+    width:6vw;
+    height:6vw;
+    margin:1.5vw;
+    background: url("../images/exit.png");
+    right:0px;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    outline:none;
+    /* -moz-transition-property: width, height,margin-top;
+    -moz-transition-duration:0.2s;
+    -moz-transition-timing-function:ease;
+    -webkit-transition: all 0.2s ease 0 ; */
+}
+
+
+.popcon{
+    /* display:none; */
+    display: flex;
+    justify-content:space-around;
+    flex-direction:column;
+    align-items: center;
+}
+
+.aucon{
+    display: flex;
+    flex-direction:row;
+    align-items: top;
+    height:8vw;
+    width:70vw;
+    justify-content:space-around;
+}
+
+.mov{
+    height:34vw;
+    display:flex;
+    align-items: center;
+}
+
+#play{
+    background: url("../images/start.png") left top no-repeat;
+    width:8vw;
+    height:8vw;
+    background-size: contain;
+    border:none;
+    outline:none;
+    -moz-transition-property: width, height,margin-top;
+    -moz-transition-duration:0.2s;
+    -moz-transition-timing-function:ease;
+    -webkit-transition: all 0.2s ease 0 ;
+    border-radius:8vw;
+}
+
+#play:hover{
+    box-shadow: 0 0 6px gray;
+}
+/* #play:active{
+    width:4.8vw;
+    height:4.8vw;
+} */
+
+#stop{
+    background: url("../images/stop.png") left top no-repeat;
+    width:8vw;
+    height:8vw;
+    background-size: contain;
+    border:none;
+    outline:none;
+    -moz-transition-property: width, height,margin-top;
+    -moz-transition-duration:0.2s;
+    -moz-transition-timing-function:ease;
+    -webkit-transition: all 0.2s ease 0 ;
+    border-radius:8vw;
+}
+
+#stop:hover{
+    box-shadow: 0 0 6px gray;
+}
+/* #stop:active{
+    width:4.8vw;
+    height:4.8vw;
+} */
+
+#seek{
+    width:50vw;
+    height:8vw;
+    display: flex;
+    flex-direction:column;
+    align-items: left;
+    justify-content:center;
+}
+
+#seekbar {
+    width: 48vw;
+    height: 1vw;
+    margin: 0.5vw 0 0.5vw 1vw;
+    border-radius: 5px;
+    background: linear-gradient(rgb(194, 24, 24), rgb(194, 24, 24)) no-repeat rgb(187, 187, 187);
+  }
+
+
+video{
+    height:30vw;
+}
