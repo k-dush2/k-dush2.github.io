@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>gat home</title>
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/pop.css" rel="stylesheet">
+        <link href="css/menu.css" rel="stylesheet">
+        <link href="css/body.css" rel="stylesheet">
+        <script type="text/javascript" src="js/gat1.js"></script>
+    </head>
+    <body>
+    <video id="bgmov" src="./images/guyicon.mp4" poster="./images/guyconbg.png" autoplay muted loop></video>
+    <button id="goFS">Go fullscreen</button>
+    <div id="main">
+        <div id="sound">
+            <div class="tp">
+                <input type="button" class="but" value="1st">
+                <input type="button" class="but" value="2nd">
+                <input type="button" class="but" value="3rd">
+                <input type="button" class="but" value="4th">
+            </div>
+            <div class="bt">
+                <input type="button" class="but" value="last">
+            </div>
+        </div>
+    </div>
+    <div class="hidden" id="pop">
+        <input type="button" id="exit">
+        <div class="popcon">
+            <div class="mov">
+                <audio src="voices/1st.mp3"></audio>
+                <audio src="voices/2nd.mp3"></audio>
+                <audio src="voices/3rd.mp3"></audio>
+                <audio src="voices/4th.mp3"></audio>
+                <audio src="voices/5th.mp3"></audio>
+            </div>
+            <div class="aucon">
+                <div id="play"></div>
+                <div id="stop"></div>
+                <div id="seek">
+                    <div id="time" style="color:white;margin:0 0 0 1vw;font-size:1.5vw;">
+                            <span id="current">00:00</span>
+                            <span>/</span>
+                            <span id="duration">00:00</span>
+                        </div>
+                        <div id="seekbar"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div id="map">
+        <div id="imap">
+            <div id="map0" class="row">
+                <div class="sq"></div>
+            </div>
+            <div id="map1" class="row">
+                <div class="mrf"></div>
+                <div class="sq">a</div>
+                <div class="sq">b</div>
+                <div class="sq">c</div>
+                <div class="sq">d</div>
+                <div class="sq">e</div>
+                <div class="mrl"></div>
+            </div>
+            <div id="map2" class="row">
+                <div class="mrf"></div>
+                <div class="sq">f</div>
+                <div class="sq">g</div>
+                <div class="sq">h</div>
+                <div class="sq">i</div>
+                <div class="sq">k</div>
+                <div class="mrl"></div>
+            </div>
+            <div id="map3" class="row">
+                <div class="mrf"></div>
+                <div class="sq">l</div>
+                <div class="sq">m</div>
+                <div class="sq">n</div>
+                <div class="sq">o</div>
+                <div class="sq">p</div>
+                <div class="mrl"></div>
+            </div>
+            <div id="map4" class="row">
+                <div class="mrf"></div>
+                <div class="sq">q</div>
+                <div class="sq">r</div>
+                <div class="sq">s</div>
+                <div class="sq">t</div>
+                <div class="sq">u</div>
+                <div class="mrl"></div>
+            </div>
+            <div id="map5" class="row">
+                <div class="mrf"></div>
+                <div class="sq">v</div>
+                <div class="sq">w</div>
+                <div class="sq">x</div>
+                <div class="sq">y</div>
+                <div class="sq">z</div>
+                <div class="mrl"></div>
+            </div>
+            <form class="raw">
+                <input type="text" id="ans">
+                <input type="button" id="sub" value="送信">
+            </form>
+        </div>
+    </div>
+    <button id="menu"></button>
+    </body>
+    </html>

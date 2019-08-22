@@ -1,0 +1,134 @@
+
+
+
+
+#chap{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:column;
+    height:70vh;
+    width:45vw;
+}
+
+.chapter{
+    height:6vh;
+    width:32vw;
+    background-color: rgba(77,77,77,0.5);
+    z-index: 2;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    border:0.6vh solid rgba(0,0,0,0);
+    position:relative;
+}
+
+.c::before{
+    content: '';
+    position:relative;
+    top:-5vh;
+    left:-14vw;
+    background: url(../images/new.png) no-repeat;
+    background-size: contain;
+    width:6vw;
+    height:4vh;
+}
+
+.chpText{
+    position:absolute;
+    top:auto;
+    left:auto;
+    font-size:5vh;
+    color:white;
+}
+
+
+#chapRight{
+    width:49vw;
+    height:94vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction:column;
+}
+
+#mov{
+    width:40vw;
+    height:22.5vw;
+    background:url(../images/movieSample.png) left top no-repeat;
+    position:relative;
+    background-size: contain;
+}
+
+
+
+
+video{
+    width:40vw;
+    position:absolute;
+    top:0;
+    left:0;
+}
+#pop{
+    width:40vw;
+    height:22.5vw;
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+    justify-content:center;
+}
+
+#play{
+    position:absolute;
+    width:40vw;
+    height:22.5vw;
+    background: url(../images/start.png) left top no-repeat;
+    background-size: contain;
+}
+
+#seek{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:40vw;
+    height:5vw;
+    display: flex;
+    flex-direction:column;
+    align-items: left;
+    justify-content:center;
+}
+
+#seekbar {
+    width: 36vw;
+    height: 1vw;
+    margin: 0vw 0 0 2vw;
+    border-radius: 5px;
+    background: linear-gradient(rgb(194, 24, 24), rgb(194, 24, 24)) no-repeat rgb(187, 187, 187);
+}
+
+#log{
+    width:40vw;
+    height:45vh;
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+    justify-content:center;
+}
+
+.logText{
+    width:40vw;
+    height:40vh;
+    overflow-x:visible;
+    overflow-y:scroll;
+    color:white;
+    font-size:3vh;
+}
+
+#logTytle{
+    font-size:5vh;
+    color:white;
+    border-bottom:5px solid white;
+}
