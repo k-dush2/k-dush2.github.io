@@ -1,4 +1,35 @@
-﻿function check_1st(i){
+﻿function going(t){
+    if(t===0){
+        window.location.href="introduction.html";
+    }
+    if(t===1){
+        window.location.href="step1.html";
+    }
+    if(t===2){
+        window.location.href="explain.html";
+    }
+    if(t===3){
+        window.location.href="clearpage.html";
+    }
+
+}
+
+function slideshow(t){
+    var imgs = new Array("images/op2.1.jpg", "images/op3.1.jpg");
+    document.getElementById("imgsrc").src = imgs[t];
+
+    if(t===0){
+        document.getElementById("righttriimg").style.display="none"
+        document.getElementById("lefttriimg").style.display="block"
+        document.getElementById("pressstart").style.display="none"
+    }else{
+        document.getElementById("righttriimg").style.display="block"
+        document.getElementById("lefttriimg").style.display="none"
+        document.getElementById("pressstart").style.display="block"
+    }
+}
+
+function check_1st(i){
     var ans_katakana = ['レッド','ブルー','ミドリイロ','オレンジ','ムラサキ','キイロ','サクライロ','ネズミイロ'];
     var ans_hiragana = ['れっど','ぶるー','みどりいろ','おれんじ','むらさき','きいろ','さくらいろ','ねずみいろ'];
     var ans_kanji = ['レッド','ブルー','緑色','オレンジ','紫','黄色','桜色','鼠色'];
@@ -8,9 +39,10 @@
     //alert(color);
     
     if((color === ans_hiragana[i] )|| (color ===　ans_kanji[i]) || (color ===　ans_katakana[i]) || (color ===　ans_kanjimajiri[i])){
-
+        alert("正解です")
         display_ans(i);
-
+    }else{
+        alert("間違っています")
     }
 
     check_1st_true();//ぜんぶみるやつ
@@ -33,7 +65,7 @@ function check_1st_true(){
     }
 
     if(array_equal(flags,clear)){
-        window.location.href="2segment.html";
+        window.location.href="step2.html";
     }
     
 
@@ -154,7 +186,7 @@ function check_2nd(){
 //    console.log(elem_in_array(answer,correct));
     if(elem_in_array(answer,correct)){
         alert("正解です");
-        window.location.href="3slide.html";
+        window.location.href="step3.html";
     }else{
         alert("間違っています");
     }
@@ -167,7 +199,7 @@ function check_3rd(){
 //    console.log(elem_in_array(answer,correct));
     if(elem_in_array(answer,correct)){
         alert("正解です");
-        window.location.href="4puzzling.html";
+        window.location.href="step4.html";
     }else{
         alert("間違っています");
     }
@@ -180,7 +212,7 @@ function check_4th(){
 //    console.log(elem_in_array(answer,correct));
     if(elem_in_array(answer,correct)){
         alert("正解です");
-        window.location.href="5pilling.html";
+        window.location.href="step5.html";
     }else if(elem_in_array(answer,extra)){
         alert("正解です");
         window.location.href="clearpage.html"

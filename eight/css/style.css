@@ -4,25 +4,74 @@ img{
     border: 0;
 }
 
-/* input,button ,textarea{ */
-    /* margin: 0; */
-    /* padding: 0; */
-    /* background: none; */
-    /* border: none; */
-    /* border-radius: 0; */
-    /* outline: none; */
-    /* -webkit-appearance: none; */
-    /* -moz-appearance: none; */
-    /* appearance: none; */
 
-/* } */
+input,button ,textarea{
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
-/* #colors main img.screen{ */
-    /* margin: 0; */
-    /* padding: 0;  */
-    /* position: absolute; */
+}
 
-/* } */
+.opening{
+    width:100%;
+    height:auto;
+}
+
+img.press{
+    width:100%;
+    height:auto;
+    position:absolute;
+    top:80%;
+}
+
+.relative{
+    position:relative;
+}
+
+img.press:hover{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+img.start{
+    width:100%;
+    height:auto;
+    position:absolute;
+    top:90%;
+    display: none;
+}
+
+img.start:hover{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+img.triangle{
+    width:3.8%;
+    height:auto;
+    position:absolute;
+    top:46.5%;
+}
+
+img.rtri{
+    left:6.6%;
+    display:none;
+}
+
+img.ltri{
+    right:6.6%;
+}
+
+img.triangle:hover{
+    opacity:0.5;
+    cursor:pointer;
+}
 
 #colors main span#headline{
     margin:0;
@@ -125,42 +174,42 @@ div.blacksquare:before{
 }
 
 #red-r{
-    left:5.8%;
+    left:6.8%;
 }
 #red-e{
-    left:8%;
+    left:8.9%;
 }
 #red-d{
-    left:10.2%;
+    left:11%;
 }
 /*
 .red{
     left:5.3%;
 }*/
 #blue-b{
-    left:13%;
+    left:16.1%;
 }
 #blue-lu{
-    left:15.2%;
+    left:18.2%;
 }
 #blue-e{
-    left:17.4%
+    left:20.3%
 }
 
 #green-g{
-    left:20.3%
+    left:23.2%
 }
 #green-r{
-    left:22.5%;
+    left:25.3%;
 }
 #green-e{
-    left:24.7%
+    left:27.4%
 }
 #green-e2{
-    left:26.9%
+    left:29.5%
 }
 #green-n{
-    left:29.1%;
+    left:31.6%;
 }
 
 #orange-o{
@@ -476,7 +525,6 @@ img.answeringbutton.under:active{
     top:553px;
 }
 
-
 .ans{
     width:25%;
     height:16px;
@@ -486,13 +534,42 @@ img.answeringbutton.under:active{
     position:absolute;
     top:500px;
 }
+/*3rd*/
+
+video.board{
+    width:55%;
+    height:auto;
+    margin:0 auto;
+    position:absolute;
+}
+
+img.board{
+    width:30%;
+    height:auto;
+    margin:0 auto;
+    position:absolute;
+}
+
+.expla{
+    width:30%;
+    height:auto;
+    position:absolute;
+    top:500px;
+}
 
 
+.larrow{
+    width:50%;
+    height:auto;
+    position: absolute;
+}
 
 .right{
     right:5%;
 }
-
+.mright{
+    left:65%;
+}
 
 .up{
     top:350px;
@@ -506,6 +583,20 @@ img.answeringbutton.under:active{
     top:550px;
 }
 
+.u600{
+    top:600px;
+}
+
+.lineup{
+    display:inline-block;
+}
+
+.center{
+    left:0;
+    right:0;
+    margin:auto;
+}
+
 .arrow{
     width:75%;
     height:auto;
@@ -513,6 +604,44 @@ img.answeringbutton.under:active{
     z-index: -50;
     top:400px;
 }
+
+
+img.epilogue{
+
+    width:20%;
+    height:auto;
+    position:absolute;
+    top:92.5%;
+    right:2.6%;
+    
+}
+
+img.epilogue:hover{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+img.background{
+    width:100%;
+    height:auto;
+}
+
+img.backbutton{
+
+    width:21%;
+    height:auto;
+    position:absolute;
+    z-index: 50;
+    top:98.95%;
+    right:1.2%;
+    
+}
+
+img.backbutton:hover{
+    opacity:0.5;
+    cursor: pointer;
+}
+
 
 
 /*
@@ -613,6 +742,3 @@ body#ex main p a img.button{
 /* position: relative; */
 	/* top: 3px; */
 /* } */
-body#ex main p img.background{
-    position:absolute;
-}
