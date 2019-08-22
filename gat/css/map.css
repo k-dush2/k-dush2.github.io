@@ -135,6 +135,7 @@
 	border:none;
 	height:5vh;
 	user-select:none;
+	font-size:4vh;
 }
 
 
@@ -160,10 +161,11 @@
 }
 #sub{
 	width:20%;
-	height:3vw;
+	height:6vh;
 	border:none;
 	margin:0;
 	padding:0;
+	font-size:3vh;
 }
 
 .sq{

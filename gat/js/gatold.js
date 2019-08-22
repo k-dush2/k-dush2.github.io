@@ -18,7 +18,7 @@ window.onload = function(){
     const itemNam=document.getElementById("itemName")
     let canuseTop=0,canuseBot=0;
     let bullethens=[5,5,5,5,5,5]
-    
+    const pBut=document.getElementsByClassName("pBut");
     const change=document.getElementById("change");
     const home=document.getElementById("home");
     const map=document.getElementById("map");
@@ -47,6 +47,9 @@ window.onload = function(){
     
     let changef=0,nokori=2;
     const sqroot=[]
+    for(let i=0;i<27;i++){
+        sqroot[i]=0;
+    }
     function mvHome(){
         home.style.left="3vw"
         home.style.top="3vw"
@@ -64,7 +67,7 @@ window.onload = function(){
         back[0].style.transform="scale(1,1)";
         mapRight.style.alignItems="flex-start"
         strsub.style.left="0vw"
-        for(let i=1;i<27;i++){
+        for(let i=0;i<27;i++){
             sqroot[i]=0;
             sq[i].style.backgroundColor=color[nowcolor]
         }
@@ -437,7 +440,7 @@ window.onload = function(){
                 }
             }
         }
-        for(let i=1;i<27;i++){
+        for(let i=0;i<27;i++){
             sqroot[i]=0;
             sq[i].style.backgroundColor=color[nowcolor];
         }
@@ -469,7 +472,7 @@ window.onload = function(){
     sq[23].style.borderColor="white white transparent"
     sq[24].style.borderColor="white"
     sq[25].style.borderColor="transparent white white"
-    sq[26].style.borderColor="white" 
+    sq[26].style.borderColor="transparent white white" 
 
     for(let i=1;i<26;i++){
         if(i%5!=0){
@@ -504,7 +507,7 @@ window.onload = function(){
             change.style.left="43vw";
             change.innerHTML="作戦へ"
             mapRight.style.alignItems="flex-start"
-            for(let i=1;i<27;i++){
+            for(let i=0;i<27;i++){
                 sqroot[i]=0;
                 sq[i].style.backgroundColor=color[nowcolor];
             }
@@ -567,7 +570,7 @@ window.onload = function(){
     const mapTytle=document.getElementById("mapTytle")
     const mapDetail=document.getElementById("mapDetail")
 
-    for(let i=1;i<sq.length;i++){
+    for(let i=0;i<sq.length;i++){
         sq[i].addEventListener("click",function(){
             if(changef===0){
                 mapIcon.style.background=`url(./images/map${i}.png) left top no-repeat`
@@ -925,7 +928,7 @@ window.onload = function(){
     }
     
     function sqDetail(){
-        for(let i=1;i<sq.length;i++){
+        for(let i=0;i<sq.length;i++){
             sq[i].innerHTML=`<div style="
                 width:8vh;
                 height:8vh;
@@ -938,7 +941,7 @@ window.onload = function(){
         }
     }
     function sqstr(){
-        for(let i=1;i<sq.length;i++){
+        for(let i=0;i<sq.length;i++){
             sq[i].innerHTML=""
             sq[i].style.background=""
             sq[i].style.backgroundColor=color[nowcolor]
@@ -979,9 +982,9 @@ window.onload = function(){
             truess[turn+1]=0;
         }
         if(turn===5){
-            sq[16].style.background=`url(./images/ziki.png) left top no-repeat`
-            sq[16].style.backgroundColor=color[nowcolor]
-            sq[16].style.backgroundSize=`contain`
+            sq[0].style.background=`url(./images/ziki.png) left top no-repeat`
+            sq[0].style.backgroundColor=color[nowcolor]
+            sq[0].style.backgroundSize=`contain`
             truess[turn]=1;
             truess[turn+1]=0;
         }
@@ -1051,9 +1054,11 @@ window.onload = function(){
 
             if(sq[22].hasChildNodes()&&sq[23].hasChildNodes()){
                 console.log(bulletnow)
+                console.log(nowcolor)
                 if(sqroot[21]*sqroot[22]*sqroot[23]*sqroot[24]*sqroot[25]===1){
                     let sum=0;
-                    for(let i=0;i<27;i++)sum+=sqroot[i];
+                    for(let i=canuseBot;i<canuseTop;i++){sum+=sqroot[i];}
+                    console.log(sum);
                     if(sum===5){
                         if((sq[22].firstElementChild.classList[2]===`icon${100}`&&bulletnow[0]===2)||(sq[22].firstElementChild.classList[2]===`icon${101}`&&bulletnow[1]===2)){
                             if((sq[23].firstElementChild.classList[2]===`icon${100}`&&bulletnow[0]===1)||(sq[23].firstElementChild.classList[2]===`icon${101}`&&bulletnow[1]===1)){
@@ -1098,7 +1103,7 @@ window.onload = function(){
                 console.log(bulletnow)
                 if(sqroot[25]*sqroot[20]*sqroot[19]*sqroot[18]*sqroot[13]*sqroot[14]*sqroot[9]*sqroot[8]*sqroot[7]*sqroot[6]===1){
                     let sum=0;
-                    for(let i=0;i<27;i++)sum+=sqroot[i];
+                    for(let i=canuseBot;i<canuseTop;i++){sum+=sqroot[i];}
                     if(sum===10){
                         if((sq[18].firstElementChild.classList[2]===`icon${100}`&&bulletnow[0]===1)||(sq[18].firstElementChild.classList[2]===`icon${101}`&&bulletnow[1]===1)){
                             if((sq[14].firstElementChild.classList[2]===`icon${100}`&&bulletnow[0]===3)||(sq[14].firstElementChild.classList[2]===`icon${101}`&&bulletnow[1]===3)){
@@ -1143,7 +1148,7 @@ window.onload = function(){
                 console.log(bulletnow)
                 if(sqroot[6]*sqroot[7]*sqroot[8]*sqroot[9]*sqroot[12]*sqroot[13]*sqroot[18]*sqroot[17]*sqroot[16]===1){
                     let sum=0;
-                    for(let i=0;i<27;i++)sum+=sqroot[i];
+                    for(let i=canuseBot;i<canuseTop;i++){sum+=sqroot[i];}
                     if(sum===9){
                         if((sq[9].firstElementChild.classList[2]===`icon${100}`&&bulletnow[0]===4)||(sq[9].firstElementChild.classList[2]===`icon${101}`&&bulletnow[1]===4)){
                             if((sq[17].firstElementChild.classList[2]===`icon${100}`&&bulletnow[0]===1)||(sq[17].firstElementChild.classList[2]===`icon${101}`&&bulletnow[1]===1)){
@@ -1188,7 +1193,7 @@ window.onload = function(){
                 console.log(bulletnow)
                 if(sqroot[16]*sqroot[17]*sqroot[18]*sqroot[19]*sqroot[13]*sqroot[12]*sqroot[9]*sqroot[8]*sqroot[7]*sqroot[6]*sqroot[2]*sqroot[3]*sqroot[4]*sqroot[5]===1){
                     let sum=0;
-                    for(let i=0;i<27;i++)sum+=sqroot[i];
+                    for(let i=canuseBot;i<canuseTop;i++){sum+=sqroot[i];}
                     if(sum===14){
                         if((sq[9].firstElementChild.classList[2]===`icon${100}`&&bulletnow[0]===1)||(sq[9].firstElementChild.classList[2]===`icon${101}`&&bulletnow[1]===1)){
                             if((sq[2].firstElementChild.classList[2]===`icon${100}`&&bulletnow[0]===1)||(sq[2].firstElementChild.classList[2]===`icon${101}`&&bulletnow[1]===1)){
@@ -1232,7 +1237,7 @@ window.onload = function(){
                 console.log(bulletnow)
                 if(sqroot[5]*sqroot[4]*sqroot[6]*sqroot[7]*sqroot[8]*sqroot[9]*sqroot[14]*sqroot[13]*sqroot[12]*sqroot[11]*sqroot[19]*sqroot[20]*sqroot[25]*sqroot[24]*sqroot[23]*sqroot[26]===1){
                     let sum=0;
-                    for(let i=0;i<27;i++)sum+=sqroot[i];
+                    for(let i=canuseBot;i<canuseTop;i++){sum+=sqroot[i];}
                     if(sum===16){
                         if((sq[19].firstElementChild.classList[2]===`icon${100}`&&bulletnow[0]===5)||(sq[19].firstElementChild.classList[2]===`icon${101}`&&bulletnow[1]===5)){
                             if((sq[26].firstElementChild.classList[2]===`icon${100}`&&bulletnow[0]===1)||(sq[26].firstElementChild.classList[2]===`icon${101}`&&bulletnow[1]===1)){
@@ -1274,7 +1279,7 @@ window.onload = function(){
         }
         else if(turn===6){
             let sum=0;
-            for(let i=0;i<27;i++)sum+=sqroot[i];
+            for(let i=canuseBot;i<canuseTop;i++){sum+=sqroot[i];}
             if((sum===1&&sqroot[26]===1)||sum===0){
                 if(nowcolor===6){
                     flug=1;
@@ -1328,7 +1333,7 @@ window.onload = function(){
     document.getElementById("map5").style.visibility="hidden"
     document.getElementById("map6").style.visibility="hidden"
 
-
+    
 
     chapter[0].addEventListener("click",function(){
         if(chpf[0]===1){
@@ -1479,15 +1484,153 @@ window.onload = function(){
     })
 
 
+    pBut[0].addEventListener("click",function(){
+        if(chpf[0]===1){
+            document.getElementById("map5").style.visibility="visible"
+            sqstr();
+            stepteki();
+            console.log("nokori is "+nokori)
+            nokori++;
+            for(;nokori<=2;nokori++){
+                bulletchange(bulletnow[2-nokori],nokori);
+            }
+            nokori--;
+            canuseTop=26;
+            canuseBot=21;
+        }
+    })
 
+    pBut[1].addEventListener("click",function(){
+        if(chpf[1]===1){
+            document.getElementById("map0").style.visibility="visible";
+            document.getElementById("map1").style.visibility="visible";
+            document.getElementById("map2").style.visibility="visible";
+            document.getElementById("map3").style.visibility="visible";
+            document.getElementById("map4").style.visibility="visible";
+            document.getElementById("map5").style.visibility="visible";
 
+            sqstr();
+            stepteki();
+            console.log("nokori is "+nokori)
+            nokori++;
+            for(;nokori<=2;nokori++){
+                bulletchange(bulletnow[2-nokori],nokori);
+            }
+            nokori--;
+            canuseTop=26;
+            canuseBot=1;
+        }
+    })
 
-    const pBut=document.getElementsByClassName("pBut");
-    for(let i=0;i<pBut.length;i++){
-        pBut[i].addEventListener("click",function(){
-            turn=i+1;
-        })
-    }
+    pBut[2].addEventListener("click",function(){
+        if(chpf[2]===1){
+            document.getElementById("map0").style.visibility="visible";
+            document.getElementById("map1").style.visibility="visible";
+            document.getElementById("map2").style.visibility="visible";
+            document.getElementById("map3").style.visibility="visible";
+            document.getElementById("map4").style.visibility="visible";
+            document.getElementById("map5").style.visibility="visible";
+            nowcolor=1;
+            let enans="blood";
+            if(enans[5]=='x'){
+                mrf[5].style.width="25%"
+                mrl[5].style.width="25%"
+            }
+            else{
+                mrf[5].style.width="5%"
+                mrl[5].style.width="45%"
+            }
+            for(let i=0;i<5;i++){
+                for(let k=0;k<5;k++){
+                    if(enans[i]==mapAlph[i*5+k+1]){
+                        mrf[i].style.width=`${45-k*10}%`
+                        mrl[i].style.width=`${5+k*10}%`
+                    }
+                }
+            }
+
+            sqstr();
+            stepteki();
+            console.log("nokori is "+nokori)
+            nokori++;
+            for(;nokori<=2;nokori++){
+                bulletchange(bulletnow[2-nokori],nokori);
+            }
+            nokori--;
+            canuseTop=26;
+            canuseBot=1;
+
+        }
+    })
+    pBut[3].addEventListener("click",function(){
+        if(chpf[3]===1){
+            document.getElementById("map0").style.visibility="visible";
+            document.getElementById("map1").style.visibility="visible";
+            document.getElementById("map2").style.visibility="visible";
+            document.getElementById("map3").style.visibility="visible";
+            document.getElementById("map4").style.visibility="visible";
+            document.getElementById("map5").style.visibility="visible";
+            document.getElementsByClassName("raw")[0].style.visibility="visible";
+
+            sqstr();
+            stepteki();
+            console.log("nokori is "+nokori)
+            nokori++;
+            for(;nokori<=2;nokori++){
+                bulletchange(bulletnow[2-nokori],nokori);
+            }
+            nokori--;
+            canuseTop=26;
+            canuseBot=0;
+
+        }
+    })
+    pBut[4].addEventListener("click",function(){
+        if(chpf[4]===1){
+            document.getElementById("map0").style.visibility="visible";
+            document.getElementById("map1").style.visibility="visible";
+            document.getElementById("map2").style.visibility="visible";
+            document.getElementById("map3").style.visibility="visible";
+            document.getElementById("map4").style.visibility="visible";
+            document.getElementById("map5").style.visibility="visible";
+            document.getElementsByClassName("raw")[0].style.visibility="visible";
+            document.getElementById("map6").style.visibility="visible";
+            sqstr();
+            stepteki();
+            console.log("nokori is "+nokori)
+            nokori++;
+            for(;nokori<=2;nokori++){
+                bulletchange(bulletnow[2-nokori],nokori);
+            }
+            nokori--;
+            canuseTop=27;
+            canuseBot=0;
+
+        }
+    })
+    pBut[5].addEventListener("click",function(){
+        if(chpf[5]===1){
+            document.getElementById("map0").style.visibility="visible";
+            document.getElementById("map1").style.visibility="visible";
+            document.getElementById("map2").style.visibility="visible";
+            document.getElementById("map3").style.visibility="visible";
+            document.getElementById("map4").style.visibility="visible";
+            document.getElementById("map5").style.visibility="visible";
+            document.getElementsByClassName("raw")[0].style.visibility="visible";
+            document.getElementById("map6").style.visibility="visible";
+            sqstr();
+            stepteki();
+            console.log("nokori is "+nokori)
+            nokori++;
+            for(;nokori<=2;nokori++){
+                bulletchange(bulletnow[2-nokori],nokori);
+            }
+            nokori--;
+            canuseTop=27;
+            canuseBot=0;
+
+        }
+    })
 
     
 }
