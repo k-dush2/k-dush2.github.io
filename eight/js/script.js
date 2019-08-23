@@ -223,7 +223,7 @@ function check_4th(){
 
 function check_5th(){
     var correct = ["UNLIMITED","unlimited","Unlimited"];
-    var answer = document.getElementById("Pill").value;
+    var answer = document.getElementById("Put").value;
 //    console.log(elem_in_array(answer,correct));
     if(elem_in_array(answer,correct)){
         alert("正解です");
