@@ -558,6 +558,14 @@ img.board{
     top:480px;
 }
 
+.larexpla{
+    width:50%;
+    height:auto;
+    position:absolute;
+    top:480px;
+}
+
+
 .box{
     width:25%;
     height:auto;
