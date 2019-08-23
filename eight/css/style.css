@@ -23,6 +23,10 @@ input,button ,textarea{
     height:auto;
 }
 
+.relative{
+    position:relative;
+}
+
 img.press{
     width:100%;
     height:auto;
@@ -30,9 +34,6 @@ img.press{
     top:80%;
 }
 
-.relative{
-    position:relative;
-}
 
 img.press:hover{
     opacity:0.5;
