@@ -295,40 +295,40 @@ div.answerletter:before{
 
 
 #ared-1{
-    left:5.8%;
+    left:6.8%;
 }
 #ared-2{
-    left:8%;
+    left:8.9%;
 }
 #ared-3{
-    left:10.2%;
+    left:11%;
 }
 
 
 #ablue-1{
-    left:13%;
+    left:16.1%;
 }
 #ablue-2{
-    left:15.2%;
+    left:18.2%;
 }
 #ablue-3{
-    left:17.4%
+    left:20.3%
 }
 
 #agreen-1{
-    left:20.3%
+    left:23.2%
 }
 #agreen-2{
-    left:22.5%;
+    left:25.3%;
 }
 #agreen-3{
-    left:24.7%
+    left:27.4%
 }
 #agreen-4{
-    left:26.9%
+    left:29.5%
 }
 #agreen-5{
-    left:29.1%;
+    left:31.6%;
 }
 
 #aorange-1{
@@ -554,14 +554,21 @@ img.board{
     width:30%;
     height:auto;
     position:absolute;
-    top:500px;
+    top:480px;
 }
 
+.box{
+    width:25%;
+    height:auto;
+    position:absolute;
+    top:520px;
+}
 
 .larrow{
-    width:50%;
+    width:40%;
     height:auto;
     position: absolute;
+    top:525px;
 }
 
 .right{
