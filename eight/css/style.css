@@ -649,7 +649,19 @@ img.backbutton:hover{
     cursor: pointer;
 }
 
+summary{
+    cursor:pointer;
+}
 
+.suit{
+    display:inline;
+    width:1em;
+
+}
+.hintboard{
+    width:100%;
+    height:auto;
+}
 
 /*
 #colors main input[type="button"]{
