@@ -15,7 +15,8 @@
     <main>
         <!-- <img src="images/2HR_first.jpg" class="screen" usemap="#first" height="842" width="1151" > -->
         <img src="images/1x/1st.png" alt="1st" class="phaselogo">
-
+        <img src="images/1x/1t08.png" alt="1 2 3 4 5 6 7 8" class="letter num">
+<!--
         <img src="images/1x/1.png" alt="1" class="letter num1">
         <img src="images/1x/2.png" alt="2" class="letter num2">
         <img src="images/1x/3.png" alt="3" class="letter num3">
@@ -24,6 +25,8 @@
         <img src="images/1x/6.png" alt="6" class="letter num6">
         <img src="images/1x/7.png" alt="7" class="letter num7">
         <img src="images/1x/8.png" alt="8" class="letter num8">
+
+--><!--
         <div class="red">
             <div class="whitesquare"  id="red-r"></div>
             <div class="blacksquare"  id="red-e"></div>
@@ -107,7 +110,26 @@
         <div class="answerletter white" id="anezumiiro-2"></div>
         <div class="answerletter black" id="anezumiiro-3"></div>
         <div class="answerletter white" id="anezumiiro-4"></div>
-        <div class="answerletter white" id="anezumiiro-5"></div>
+        <div class="answerletter white" id="anezumiiro-5"></div>-->
+
+        <img src="images/1x/1st-1.png" class="box answerletter threeletter num1">
+        <img src="images/1x/1st-2.png" class="box answerletter threeletter num2">
+        <img src="images/1x/1st-3.png" class="box answerletter fiveletter num3">
+        <img src="images/1x/1st-4.png" class="box answerletter fourletter num4">
+        <img src="images/1x/1st-5.png" class="box answerletter fourletter num5">
+        <img src="images/1x/1st-6.png" class="box answerletter threeletter num6">
+        <img src="images/1x/1st-7.png" class="box answerletter fiveletter num7">
+        <img src="images/1x/1st-8.png" class="box answerletter fiveletter num8">
+
+        
+        <img src="images/1x/red1.png" class="answerletters threeletters num1" id="red1">
+        <img src="images/1x/blue1.png" class="answerletters threeletters num2" id="blue1">
+        <img src="images/1x/green1.png" class="answerletters fiveletters num3" id="green1">
+        <img src="images/1x/orange1.png" class="answerletters fourletters num4" id="orange1">
+        <img src="images/1x/purple1.png" class="answerletters fourletters num5" id="purple1">
+        <img src="images/1x/yellow1.png" class="answerletters threeletters num6" id="yellow1">
+        <img src="images/1x/pink1.png" class="answerletters fiveletters num7" id="pink1">
+        <img src="images/1x/gray1.png" class="answerletters fiveletters num8" id="gray1">
 
 
         <div class="textbox">
@@ -130,7 +152,132 @@
         <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed8" ontouchstart="" onclick="check_1st(7)">
         
 
-        <a href="hint.html">ヒントはこちら</a>
+    <details class="hints under">
+    <summary>ヒントはこちら</summary>
+    問題の解く流れについて
+    <details>
+        <summary>第1ヒント</summary>
+        web画面の1から8までの数字の下にある白黒の四角は、それぞれパネルを表しています。web画面の情報からあるパネルを選び、そのパネルをもとに迷路を解き進めます。
+    </details>
+    <details>
+        <summary>第2ヒント</summary>
+        例えば、1の問題だったら3枚のパネルを使って「1」を、3の問題だったら5枚のパネルを使って「3」を表すことはできないでしょうか。
+    </details>
+    <details>
+        <summary>第3ヒント</summary>
+        1から8までの数字を英語で考えてみましょう。
+    </details>
+    <details>
+        <summary>第4ヒント</summary>
+        例えば1の問題について、パネルで「ONE」を作り、そのパネルに記されたルールに従って、18×18マスの迷路を解いてみましょう。
+    </details>
+    1~8までのそれぞれの問題の解き方
+    <details>
+        <summary>1の問題</summary>
+        <details>
+            <summary>「E(白)」のパネルの情報から</summary>、スタートの位置は18×18マスの迷路の一番左上のマス、ゴールの位置は18×18マスの迷路の一番右下のマスになります。
+        </details>
+        <details>
+            <summary>「O」と「N」のパネルの情報から</summary>、<img src="images/1x/tclover.png" alt="(クローバーを右90度回転させた図形）" class="suit">は通ることができません。
+        </details>
+        <details>
+            <summary>最初の経路</summary><img src="images/1x/redhint.png" class="hintboard">
+        </details>
+    </details>
+    <details>
+        <summary>2の問題</summary>
+        <details>
+            <summary>「W」のパネルについて</summary>、記されている図形はサイコロの5の目です。
+        </details>
+        <details>
+            <summary>「T」と「W」のパネルの情報から</summary>、サイコロの5の面は裏返す必要があり、面の数が2に変わります。つまり2の倍数文字目を読むということになります。
+        </details>
+        <details>
+            <summary>最初の経路</summary><img src="images/1x/bluehint.png" class="hintboard">
+        </details>
+    </details>
+    <details>
+        <summary>3の問題</summary>
+        <details>
+            <summary>「R」のパネルについて</summary>、記されている図形はサイコロの6の目です。
+        </details>
+        <details>
+            <summary>「T」と「R」のパネルの情報から</summary>、サイコロの6の面は裏返す必要があり、面の数が1に変わります。つまりスタートを0マス目として1の倍数マス目にしか曲がれません。（どのマス目でも曲がることができます）
+        </details>
+        <details>
+            <summary>「E(白)」のパネルの情報から</summary>、スタートの位置は18×18マスの迷路の一番左上のマス、ゴールの位置は18×18マスの迷路の一番右下のマスになります。
+        </details>
+        <details>
+            <summary>最初の経路</summary><img src="images/1x/greenhint.png" class="hintboard">
+        </details>
+    </details>
+    <details>
+            <summary>4の問題</summary>
+            <details>
+                <summary>「R」のパネルについて</summary>記されている図形はサイコロの6の目です。6の倍数マス目でしか曲がることができません。
+            </details>
+            <details>
+                <summary>「F」と「U」のパネルの情報から</summary><img src="images/1x/tdia.png" alt="（Uに記されている菱形を左90度回転させた横長の菱形）" class="suit">を通る必要があります。
+            </details>
+            <details>
+                <summary>最初の経路</summary><img src="images/1x/orangehint.png" class="hintboard">
+            </details>
+        </details>
+        <details>
+            <summary>5の問題</summary>
+            <details>
+                <summary>「F」と「V」のパネルの情報から</summary><img src="images/1x/tspade.png" alt="（スペードを左90度回転させた図形）" class="suit">のマスから<img src="images/1x/heart.png" alt="（ハート）" class="suit">のマスにワープをする必要があります。
+            </details>
+            <details>
+                <summary>「I」のパネルの情報から</summary>、スタートの位置は18×18マスの迷路の一番左下のマス、ゴールの位置は18×18マスの迷路の一番右上のマスになります。
+            </details>
+            <details>
+                <summary>最初の経路</summary><img src="images/1x/purplehint.png" class="hintboard">
+            </details>
+        </details>
+        
+    <details>
+            <summary>6の問題</summary>
+            <details>
+                <summary>「I」のパネルの情報から</summary>スタートの位置は18×18マスの迷路の一番左下のマス、ゴールの位置は18×18マスの迷路の一番右上のマスになります。
+            </details>
+            <details>
+                <summary>最初の経路</summary><img src="images/1x/yellowhint.png" class="hintboard">
+            </details>
+        </details>
+        
+    <details>
+            <summary>7の問題</summary>
+            <details>
+                <summary>「E(白)」のパネルの情報から</summary>、スタートの位置は18×18マスの迷路の一番左上のマス、ゴールの位置は18×18マスの迷路の一番右下のマスになります。
+            </details>
+            <details>
+                <summary>「V」と「N」のパネルの情報から</summary>、<img src="images/1x/tspade.png" alt="（スペード）" class="suit">のマスから<img src="images/1x/tspade.png" alt="ハートを左90度回転させた図形）" class="suit">のマスにワープをする必要があります。
+            </details>
+            <details>
+                <summary>最初の経路</summary><img src="images/1x/pinkhint.png" class="hintboard">
+            </details>
+        </details>
+        <details>
+            <summary>8の問題</summary>
+            <details>
+                <summary>「I」のパネルの情報から</summary>、スタートの位置は18×18マスの迷路の一番左下のマス、ゴールの位置は18×18マスの迷路の一番右上のマスになります。
+            </details>
+            <details>
+                <summary>「T」と「G」のパネルの情報から</summary>、サイコロの2の面は裏返す必要があり、面の数が5に変わります。つまり5回曲がれということになります。
+            </details>
+            <details>
+                <summary>最初の経路</summary><img src="images/1x/grayhint.png" class="hintboard">
+            </details>
+        </details>
+        <details>
+            <summary>迷路の基本ルールについて</summary>
+            ・「〜の倍数『文字』目」と「〜の倍数『マス』目」は違うことに注意しましょう。<br>
+            ・迷路は『最短経路』で進むことを忘れないようにしましょう。                
+        </details>
+        </details>
+
+        <!-- <a href="hint.html">ヒントはこちら</a> -->
     </main>
 </body>
 </html>

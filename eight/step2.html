@@ -15,7 +15,9 @@
     <main>
         <!-- <img src="images/2HR_first.jpg" class="screen" usemap="#first" height="842" width="1151" > -->
         <img src="images/1x/2nd.png" alt="1st" class="phaselogo">
+        <img src="images/1x/1t08.png" alt="1 2 3 4 5 6 7 8" class="letter num">
 
+        <!--
         <img src="images/1x/1.png" alt="1" class="letter num1">
         <img src="images/1x/2.png" alt="2" class="letter num2">
         <img src="images/1x/3.png" alt="3" class="letter num3">
@@ -23,8 +25,11 @@
         <img src="images/1x/5.png" alt="5" class="letter num5">
         <img src="images/1x/6.png" alt="6" class="letter num6">
         <img src="images/1x/7.png" alt="7" class="letter num7">
-        <img src="images/1x/8.png" alt="8" class="letter num8">
+        <img src="images/1x/8.png" alt="8" class="letter num8"> -->
 
+        <img src="images/1x/2ndbox.png" alt="→" class="arrow center" >
+
+<!--
         <div class="bigblack num1 up"></div>
         <div class="bigwhite num1 down"></div>
         <div class="bigwhite num2 up"></div>
@@ -40,7 +45,19 @@
         <div class="bigblack num7 up"></div>
         <div class="bigwhite num7 down"></div>
         <div class="bigwhite num8 up"></div>
-        <div class="bigblack num8 down"></div>
+        <div class="bigblack num8 down"></div> -->
+
+
+        <img src="images/1x/red2.png" class="answerletter threeletter num1">
+        <img src="images/1x/blue2.png" class="answerletter threeletter num2">
+        <img src="images/1x/green2.png" class="answerletter fiveletter num3">
+        <img src="images/1x/orange2.png" class="answerletter fourletter num4">
+        <img src="images/1x/purple2.png" class="answerletter fourletter num5">
+        <img src="images/1x/yellow2.png" class="answerletter threeletter num6">
+        <img src="images/1x/pink2.png" class="answerletter fiveletter num7">
+        <img src="images/1x/gray2.png" class="answerletter fiveletter num8">
+
+        <!--
 
         <div class="answerletter black" id="ared-1">レ</div>
         <div class="answerletter black" id="ared-2">ッ</div>
@@ -80,10 +97,7 @@
         <div class="answerletter black" id="anezumiiro-2">ズ</div>
         <div class="answerletter black" id="anezumiiro-3">ミ</div>
         <div class="answerletter black" id="anezumiiro-4">イ</div>
-        <div class="answerletter black" id="anezumiiro-5">ロ</div>
-
-        <img src="images/1x/arrow.png" class="arrow" alt="→">
-
+        <div class="answerletter black" id="anezumiiro-5">ロ</div> -->
 
         <div class="textbox">
             <input type="text" id="Segment" class="ans right" value="" placeholder="アルファベット8文字">
@@ -91,7 +105,25 @@
         <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton right under" ontouchstart="" onclick="check_2nd()">
         
 
-        <a href="hint.html">ヒントはこちら</a>
+        <details class="hints under">
+            <summary>ヒントはこちら</summary>
+        <details>
+            <summary>第1ヒント</summary>
+            　1stでは1から8までの数字を英語で表しましたが、2ndでは1から8までの数字を違う表現で表します。            
+        </details>
+        <details>
+            <summary>第2ヒント</summary>
+            　1から8までの数字を表すためには、1stの答えを使います。            
+        </details>
+        <details>
+            <summary>第3ヒント</summary>画面中の数字をこのように変化させて考えてみましょう。<img src="images/1x/2ndhint.jpg" class="hintboard">
+        </details>
+        <details>
+            <summary>第4ヒント</summary>2枚のパネルを上下に並べて、1だったら赤のセグメント、2だったら青のセグメントで数字を1から8まで作ります。答えは矢印が通るアルファベット8文字の英単語です。
+        </details>
+
+
+            </details>
     </main>
 </body>
 </html>

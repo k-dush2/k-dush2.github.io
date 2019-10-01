@@ -15,7 +15,7 @@
 }
 
 function slideshow(t){
-    var imgs = new Array("images/op2.1.jpg", "images/op3.1.jpg");
+    var imgs = new Array("images/op2.1.png", "images/op3.1.png");
     document.getElementById("imgsrc").src = imgs[t];
 
     if(t===0){
@@ -73,18 +73,21 @@ function check_1st_true(){
 
 function display_ans(i){
     
-    if(i === 0){
+    if(i === 0){/*
         r1 = document.getElementById("ared-1");
         r2 = document.getElementById("ared-2");
         r3 = document.getElementById("ared-3");
 
         r1.innerHTML = "レ";
         r2.innerHTML = "ッ";
-        r3.innerHTML = "ド";
+        r3.innerHTML = "ド";*/
+
+        document.getElementById("red1").style.display = "block";
     }
 
     
     if(i === 1){
+        /*
         b1 = document.getElementById("ablue-1");
         b2 = document.getElementById("ablue-2");
         b3 = document.getElementById("ablue-3");
@@ -92,9 +95,13 @@ function display_ans(i){
         b1.innerHTML = "ブ";
         b2.innerHTML = "ル";
         b3.innerHTML = "ー";
+        */
+
+       document.getElementById("blue1").style.display = "block";
     }
 
     if(i === 2){
+        /*
         g1 = document.getElementById("agreen-1");
         g2 = document.getElementById("agreen-2");
         g3 = document.getElementById("agreen-3");
@@ -107,10 +114,14 @@ function display_ans(i){
         g3.innerHTML = "リ";
         g4.innerHTML = "イ";
         g5.innerHTML = "ロ";
+        */
+       
+       document.getElementById("green1").style.display = "block";
     }
 
     
     if(i === 3){
+        /*
         o1 = document.getElementById("aorange-1");
         o2 = document.getElementById("aorange-2");
         o3 = document.getElementById("aorange-3");
@@ -121,10 +132,14 @@ function display_ans(i){
         o2.innerHTML = "レ";
         o3.innerHTML = "ン";
         o4.innerHTML = "ジ";
+        */
+       
+       document.getElementById("orange1").style.display = "block";
     }
 
     
     if(i === 4){
+        /*
         m1 = document.getElementById("amurasaki-1");
         m2 = document.getElementById("amurasaki-2");
         m3 = document.getElementById("amurasaki-3");
@@ -135,10 +150,14 @@ function display_ans(i){
         m2.innerHTML = "ラ";
         m3.innerHTML = "サ";
         m4.innerHTML = "キ";
+        */
+       
+       document.getElementById("purple1").style.display = "block";
     }
 
     
     if(i === 5){
+        /*
         y1 = document.getElementById("akiiro-1");
         y2 = document.getElementById("akiiro-2");
         y3 = document.getElementById("akiiro-3");
@@ -146,9 +165,13 @@ function display_ans(i){
         y1.innerHTML = "キ";
         y2.innerHTML = "イ";
         y3.innerHTML = "ロ";
+        */
+       
+       document.getElementById("yellow1").style.display = "block";
     }
     
     if(i === 6){
+        /*
         s1 = document.getElementById("asakurairo-1");
         s2 = document.getElementById("asakurairo-2");
         s3 = document.getElementById("asakurairo-3");
@@ -161,9 +184,13 @@ function display_ans(i){
         s3.innerHTML = "ラ";
         s4.innerHTML = "イ";
         s5.innerHTML = "ロ";
+        */
+
+        document.getElementById("pink1").style.display = "block";
     }
 
     if(i === 7){
+        /*
         g1 = document.getElementById("anezumiiro-1");
         g2 = document.getElementById("anezumiiro-2");
         g3 = document.getElementById("anezumiiro-3");
@@ -176,6 +203,9 @@ function display_ans(i){
         g3.innerHTML = "ミ";
         g4.innerHTML = "イ";
         g5.innerHTML = "ロ";
+        */
+        
+       document.getElementById("gray1").style.display = "block";
     }
 
 }
@@ -230,6 +260,132 @@ function check_5th(){
         window.location.href="clearpage.html";
     }else{
         alert("間違っています");
+    }
+}
+
+function showpath(t){
+    switch(t){
+        case 0:
+            if(document.getElementById("redpath-1").style.display === "block"){
+                document.getElementById("redpath-1").style.display = "none";
+            }else{
+                document.getElementById("redpath-1").style.display = "block";
+            }
+            break;
+        case 1:
+            if(document.getElementById("bluepath-1").style.display === "block"){
+                document.getElementById("bluepath-1").style.display = "none";
+            }else{
+                document.getElementById("bluepath-1").style.display = "block";
+            }
+            break;
+        case 2:
+            if(document.getElementById("greenpath-1").style.display === "block"){
+                document.getElementById("greenpath-1").style.display = "none";
+            }else{
+                document.getElementById("greenpath-1").style.display = "block";
+            }
+            break;
+        case 3:
+            if(document.getElementById("orangepath-1").style.display === "block"){
+                document.getElementById("orangepath-1").style.display = "none";
+            }else{
+                document.getElementById("orangepath-1").style.display = "block";
+            }
+            break;
+        case 4:
+            if(document.getElementById("purplepath-1").style.display === "block"){
+                document.getElementById("purplepath-1").style.display = "none";
+            }else{
+                document.getElementById("purplepath-1").style.display = "block";
+            }
+            break;
+        case 5:
+            if(document.getElementById("yellowpath-1").style.display === "block"){
+                document.getElementById("yellowpath-1").style.display = "none";
+            }else{
+                document.getElementById("yellowpath-1").style.display = "block";
+            }
+            break;
+        case 6:
+            if(document.getElementById("pinkpath-1").style.display === "block"){
+                document.getElementById("pinkpath-1").style.display = "none";
+            }else{
+                document.getElementById("pinkpath-1").style.display = "block";
+            }
+            break;
+        case 7:
+            if(document.getElementById("graypath-1").style.display === "block"){
+                document.getElementById("graypath-1").style.display = "none";
+            }else{
+                document.getElementById("graypath-1").style.display = "block";
+            }
+            break;
+        case 10:
+            if(document.getElementById("redpath-2").style.display === "block"){
+                document.getElementById("redpath-2").style.display = "none";
+            }else{
+                document.getElementById("redpath-2").style.display = "block";
+            }
+            break;
+        case 11:
+            if(document.getElementById("bluepath-2").style.display === "block"){
+                document.getElementById("bluepath-2").style.display = "none";
+            }else{                            
+                 document.getElementById("bluepath-2").style.display = "block";
+            }
+            break;
+        case 12:
+            if(document.getElementById("greenpath-2").style.display === "block"){
+                document.getElementById("greenpath-2").style.display = "none";
+            }else{
+                document.getElementById("greenpath-2").style.display = "block";
+            }
+            break;
+        case 13:
+            if(document.getElementById("orangepath-2").style.display === "block"){
+                document.getElementById("orangepath-2").style.display = "none";
+            }else{
+                document.getElementById("orangepath-2").style.display = "block";
+            }
+            break;
+        case 14:
+            if(document.getElementById("purplepath-2").style.display === "block"){
+                document.getElementById("purplepath-2").style.display = "none";
+            }else{
+                document.getElementById("purplepath-2").style.display = "block";
+            }
+            break;
+        case 15:
+            if(document.getElementById("yellowpath-2").style.display === "block"){
+                document.getElementById("yellowpath-2").style.display = "none";
+            }else{
+                document.getElementById("yellowpath-2").style.display = "block";
+            }
+            break;
+        case 16:
+            if(document.getElementById("pinkpath-2").style.display === "block"){
+                document.getElementById("pinkpath-2").style.display = "none";
+            }else{
+                document.getElementById("pinkpath-2").style.display = "block";
+            }
+            break;
+        case 17:
+            if(document.getElementById("graypath-2").style.display === "block"){
+                document.getElementById("graypath-2").style.display = "none";
+            }else{
+                document.getElementById("graypath-2").style.display = "block";
+            }
+            break;
+    }
+}
+
+function shownumpath(t){
+    var pathid = "path-" + String(t);
+    if(document.getElementById(pathid).style.display === "block"){
+        document.getElementById(pathid).style.display = "none";
+    }else{
+        document.getElementById(pathid).style.display = "block";
     }
 }
 
