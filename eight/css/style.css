@@ -35,6 +35,25 @@ img.press{
     top:80%;
 }
 
+#wrapper {
+    position:relative;
+    width:100%;
+}
+
+#wrapper:before{
+    content:"";
+    display: block;
+    padding-top: 66%;
+}
+
+#content{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
 
 img.press:hover{
     opacity:0.5;
@@ -86,7 +105,7 @@ img.letter{
     width:67.5%;
     height:auto;
     position:absolute;
-    top:200px;
+    top:20%;
 }
 div.bigblack{
     width:5%;
@@ -328,25 +347,10 @@ img.box1{
 
 }
 
-/*
-div.answerletter{
-    width:1.9%;
-    height:auto;
-    position:absolute;
-    top:300px;
-}
-div.answerletter:before{
-    content:"";
-    display:block;
-    padding-bottom:100%;
-}
-*/
-
-
 img.answerletter{
 
     position:absolute;
-    top:300px;
+    top:33%;
 }
 img.answerletters{
 
@@ -505,7 +509,7 @@ img.fiveletters{
     height:auto;
     border:double;
     position:absolute;
-    top:400px;
+    top:40%;
 }
 
 #Color0{
@@ -545,7 +549,7 @@ img.fiveletters{
     width: 6%;
     height:auto;
     position:absolute;
-    top:430px
+    top:47%;
 }
 
 #sed1{
@@ -618,17 +622,15 @@ img.answeringbutton:hover{
 }
 
 img.answeringbutton.under:active{
-    top:553px;
+    top:80%;
 }
 
 .ans{
     width:25%;
     height:16px;
-    max-width:500px;
-    min-width:100px;
     border:double;
     position:absolute;
-    top:500px;
+    top:60%;
 }
 /*3rd*/
 
@@ -650,14 +652,14 @@ img.board{
     width:30%;
     height:auto;
     position:absolute;
-    top:480px;
+    top:48%;
 }
 
 .larexpla{
     width:50%;
     height:auto;
     position:absolute;
-    top:480px;
+    top:48%;
 }
 
 
@@ -665,14 +667,14 @@ img.box{
     width:25%;
     height:auto;
     position:absolute;
-    top:515px;
+    top:52%;
 }
 
 .larrow{
     width:40%;
     height:auto;
     position: absolute;
-    top:525px;
+    top:52%;
 }
 
 .right{
@@ -691,18 +693,15 @@ img.box{
 }
 
 .under{
-    top:550px;
+    top:70%;
 }
 
 .u600{
-    top:600px;
+    top:65%;
 }
 
-.u650{
-    top:600px;
-}
 .u700{
-    top:700px;
+    top:68%;
 }
 
 .lineup{
@@ -719,7 +718,7 @@ img.box{
     width:80%;
     height:auto;
     position:absolute;
-    top:350px;
+    top:37%;
 }
 
 
@@ -1125,63 +1124,6 @@ img#path-13{
     top:92.27%;
     left:20%;
 }
-/*
-#colors main input[type="button"]{
-    
-    height: 17px;
-    width: 76px;
-    position: absolute;
-}
-
-#colors main input[type="button"]#Button0{
-
-    top: 424px;
-    left: 91px;
-}
-
-#colors main input[type="button"]#Button1{
-
-    top: 424px;
-    left: 192px;
-}
-
-#colors main input[type="button"]#Button2{
-
-    top: 424px;
-    left: 320px;
-}
-
-#colors main input[type="button"]#Button3{
-
-    top: 424px;
-    left: 462px;
-}
-
-#colors main input[type="button"]#Button4{
-
-    top: 424px;
-    left: 590px;
-}
-
-#colors main input[type="button"]#Button5{
-
-    top: 424px;
-    left: 707px;
-}
-
-#colors main input[type="button"]#Button6{
-
-    top: 424px;
-    left: 837px;
-}
-
-#colors main input[type="button"]#Button7{
-
-    top: 424px;
-    left: 1000px;
-}*/
-
-
 
 #pill main img#icon{
     position: absolute;
@@ -1212,64 +1154,3 @@ body#ex main p a img.button{
     left:650px;
 
 }
-
-/* body#ex main p a img.button:hover{ */
-/*  */
-    /* opacity:0.5; */
-	/* cursor: pointer; */
-/* } */
-
-/* body#ex main p a img.button:active{ */
-/* position: relative; */
-	/* top: 3px; */
-/* } 
-
-.cp_menu {
-	max-width: 360px;
-	margin: 0 auto;
-	padding: 0;
-}
-.cp_menu a {
-	display: block;
-	padding: 10px;
-	text-decoration: none;
-	color: #000000;
-	line-height: 1;
-}
-.cp_menu label {
-	display: block;
-	position: relative;
-	margin: 0 0 2px 0;
-	padding: 12px;
-	line-height: 1;
-	color: #ffffff;
-	background: #1b2538;
-	cursor: pointer;
-}
-.cp_menu label::before {
-	position: absolute;
-	content: '▼';
-	color: #ffffff;
-	right: 0.5em;
-	top: 25%;
-}
-.cp_menu input {
-	display: none;
-}
-.cp_menu ul {
-	margin: 0;
-	padding: 0;
-	background: #f4f4f4;
-	list-style: none;
-}
-.cp_menu li {
-	overflow-y: hidden;
-	max-height: 0;
-	transition: all 0.5s;
-}
-/*リストが増えたらULごとに追加してください
-#cp_menu_bar1:checked ~ #link1 li,
-#cp_menu_bar2:checked ~ #link2 li {
-	max-height: 46px;
-	opacity: 1;
-}*/

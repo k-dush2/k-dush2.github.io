@@ -13,193 +13,98 @@
 
 <body id="colors">
     <main>
-        <!-- <img src="images/2HR_first.jpg" class="screen" usemap="#first" height="842" width="1151" > -->
-        <img src="images/1x/1st.png" alt="1st" class="phaselogo">
-        <img src="images/1x/1t08.png" alt="1 2 3 4 5 6 7 8" class="letter num">
-<!--
-        <img src="images/1x/1.png" alt="1" class="letter num1">
-        <img src="images/1x/2.png" alt="2" class="letter num2">
-        <img src="images/1x/3.png" alt="3" class="letter num3">
-        <img src="images/1x/4.png" alt="4" class="letter num4">
-        <img src="images/1x/5.png" alt="5" class="letter num5">
-        <img src="images/1x/6.png" alt="6" class="letter num6">
-        <img src="images/1x/7.png" alt="7" class="letter num7">
-        <img src="images/1x/8.png" alt="8" class="letter num8">
+        <div id="wrapper">
+            <div id="content">
+            <img src="images/1x/1st.png" alt="1st" class="phaselogo">
+            <img src="images/1x/1t08.png" alt="1 2 3 4 5 6 7 8" class="letter num">
+            <img src="images/1x/1st-1.png" class="answerletter threeletter num1">
+            <img src="images/1x/1st-2.png" class="answerletter threeletter num2">
+            <img src="images/1x/1st-3.png" class="answerletter fiveletter num3">
+            <img src="images/1x/1st-4.png" class="answerletter fourletter num4">
+            <img src="images/1x/1st-5.png" class="answerletter fourletter num5">
+            <img src="images/1x/1st-6.png" class="answerletter threeletter num6">
+            <img src="images/1x/1st-7.png" class="answerletter fiveletter num7">
+            <img src="images/1x/1st-8.png" class="answerletter fiveletter num8">
 
---><!--
-        <div class="red">
-            <div class="whitesquare"  id="red-r"></div>
-            <div class="blacksquare"  id="red-e"></div>
-            <div class="whitesquare"  id="red-d"></div>
-        </div>
-        <div class="blue">
-            <div class="blacksquare"  id="blue-b"></div>
-            <div class="blacksquare"  id="blue-lu"></div>
-            <div class="whitesquare"  id="blue-e"></div>
-        </div>
-        <div class="green">
-        <div class="blacksquare"  id="green-g"></div>
-        <div class="blacksquare"  id="green-r"></div>
-        <div class="whitesquare"  id="green-e"></div>
-        <div class="blacksquare"  id="green-e2"></div>
-        <div class="whitesquare"  id="green-n"></div>
-        </div>
-        <div class="orange">
-        <div class="whitesquare"  id="orange-o"></div>
-        <div class="whitesquare"  id="orange-ra"></div>
-        <div class="blacksquare"  id="orange-n"></div>
-        <div class="whitesquare" id="orange-ge"></div>
-        </div>
-        <div class="whitesquare" id="murasaki-mu"></div>
-        <div class="blacksquare" id="murasaki-ra"></div>
-        <div class="whitesquare" id="murasaki-sa"></div>
-        <div class="blacksquare" id="murasaki-ki"></div>
-
-        <div class="whitesquare" id="kiiro-ki"></div>
-        <div class="blacksquare" id="kiiro-i"></div>
-        <div class="whitesquare" id="kiiro-ro"></div>
-
-        <div class="whitesquare" id="sakurairo-sa"></div>
-        <div class="whitesquare" id="sakurairo-ku"></div>
-        <div class="whitesquare" id="sakurairo-ra"></div>
-        <div class="blacksquare" id="sakurairo-i"></div>
-        <div class="blacksquare" id="sakurairo-ro"></div>
-
-        <div class="blacksquare" id="nezumiiro-ne"></div>
-        <div class="blacksquare" id="nezumiiro-zu"></div>
-        <div class="whitesquare" id="nezumiiro-mi"></div>
-        <div class="blacksquare" id="nezumiiro-i"></div>
-        <div class="blacksquare" id="nezumiiro-ro"></div>
+            
+            <img src="images/1x/red1.png" class="answerletters threeletters num1" id="red1">
+            <img src="images/1x/blue1.png" class="answerletters threeletters num2" id="blue1">
+            <img src="images/1x/green1.png" class="answerletters fiveletters num3" id="green1">
+            <img src="images/1x/orange1.png" class="answerletters fourletters num4" id="orange1">
+            <img src="images/1x/purple1.png" class="answerletters fourletters num5" id="purple1">
+            <img src="images/1x/yellow1.png" class="answerletters threeletters num6" id="yellow1">
+            <img src="images/1x/pink1.png" class="answerletters fiveletters num7" id="pink1">
+            <img src="images/1x/gray1.png" class="answerletters fiveletters num8" id="gray1">
 
 
-        <div class="answerletter black" id="ared-1"></div>
-        <div class="answerletter white" id="ared-2"></div>
-        <div class="answerletter black" id="ared-3"></div>
+            <div class="textbox">
+                <input type="text" id="Color0" class="fil1" value="">
+                <input type="text" id="Color1" class="fil2" value="">    
+                <input type="text" id="Color2" class="fil3" value="">
+                <input type="text" id="Color3" class="fil4" value="">
+                <input type="text" id="Color4" class="fil5" value="">
+                <input type="text" id="Color5" class="fil6" value="">
+                <input type="text" id="Color6" class="fil7" value="">
+                <input type="text" id="Color7" class="fil8" value="">
+            </div>
+            <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed1" ontouchstart="" onclick="check_1st(0)">
+            <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed2" ontouchstart="" onclick="check_1st(1)">
+            <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed3" ontouchstart="" onclick="check_1st(2)">
+            <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed4" ontouchstart="" onclick="check_1st(3)">
+            <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed5" ontouchstart="" onclick="check_1st(4)">
+            <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed6" ontouchstart="" onclick="check_1st(5)">
+            <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed7" ontouchstart="" onclick="check_1st(6)">
+            <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed8" ontouchstart="" onclick="check_1st(7)">
+            
 
-        <div class="answerletter white" id="ablue-1"></div>
-        <div class="answerletter white" id="ablue-2"></div>
-        <div class="answerletter black" id="ablue-3"></div>
-
-        <div class="answerletter white" id="agreen-1"></div>
-        <div class="answerletter white" id="agreen-2"></div>
-        <div class="answerletter black" id="agreen-3"></div>
-        <div class="answerletter white" id="agreen-4"></div>
-        <div class="answerletter black" id="agreen-5"></div>
-
-        <div class="answerletter black" id="aorange-1"></div>
-        <div class="answerletter black" id="aorange-2"></div>
-        <div class="answerletter white" id="aorange-3"></div>
-        <div class="answerletter black" id="aorange-4"></div>
-
-        <div class="answerletter black" id="amurasaki-1"></div>
-        <div class="answerletter white" id="amurasaki-2"></div>
-        <div class="answerletter black" id="amurasaki-3"></div>
-        <div class="answerletter white" id="amurasaki-4"></div>
-
-        <div class="answerletter black" id="akiiro-1"></div>
-        <div class="answerletter white" id="akiiro-2"></div>
-        <div class="answerletter black" id="akiiro-3"></div>
-
-        <div class="answerletter black" id="asakurairo-1"></div>
-        <div class="answerletter black" id="asakurairo-2"></div>
-        <div class="answerletter black" id="asakurairo-3"></div>
-        <div class="answerletter white" id="asakurairo-4"></div>
-        <div class="answerletter white" id="asakurairo-5"></div>
-
-        <div class="answerletter white" id="anezumiiro-1"></div>
-        <div class="answerletter white" id="anezumiiro-2"></div>
-        <div class="answerletter black" id="anezumiiro-3"></div>
-        <div class="answerletter white" id="anezumiiro-4"></div>
-        <div class="answerletter white" id="anezumiiro-5"></div>-->
-
-        <img src="images/1x/1st-1.png" class="boxes answerletter threeletter num1">
-        <img src="images/1x/1st-2.png" class="boxes answerletter threeletter num2">
-        <img src="images/1x/1st-3.png" class="boxes answerletter fiveletter num3">
-        <img src="images/1x/1st-4.png" class="boxes answerletter fourletter num4">
-        <img src="images/1x/1st-5.png" class="boxes answerletter fourletter num5">
-        <img src="images/1x/1st-6.png" class="boxes answerletter threeletter num6">
-        <img src="images/1x/1st-7.png" class="boxes answerletter fiveletter num7">
-        <img src="images/1x/1st-8.png" class="boxes answerletter fiveletter num8">
-
-        
-        <img src="images/1x/red1.png" class="answerletters threeletters num1" id="red1">
-        <img src="images/1x/blue1.png" class="answerletters threeletters num2" id="blue1">
-        <img src="images/1x/green1.png" class="answerletters fiveletters num3" id="green1">
-        <img src="images/1x/orange1.png" class="answerletters fourletters num4" id="orange1">
-        <img src="images/1x/purple1.png" class="answerletters fourletters num5" id="purple1">
-        <img src="images/1x/yellow1.png" class="answerletters threeletters num6" id="yellow1">
-        <img src="images/1x/pink1.png" class="answerletters fiveletters num7" id="pink1">
-        <img src="images/1x/gray1.png" class="answerletters fiveletters num8" id="gray1">
-
-
-        <div class="textbox">
-            <input type="text" id="Color0" class="fil1" value="">
-            <input type="text" id="Color1" class="fil2" value="">    
-            <input type="text" id="Color2" class="fil3" value="">
-            <input type="text" id="Color3" class="fil4" value="">
-            <input type="text" id="Color4" class="fil5" value="">
-            <input type="text" id="Color5" class="fil6" value="">
-            <input type="text" id="Color6" class="fil7" value="">
-            <input type="text" id="Color7" class="fil8" value="">
-        </div>
-        <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed1" ontouchstart="" onclick="check_1st(0)">
-        <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed2" ontouchstart="" onclick="check_1st(1)">
-        <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed3" ontouchstart="" onclick="check_1st(2)">
-        <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed4" ontouchstart="" onclick="check_1st(3)">
-        <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed5" ontouchstart="" onclick="check_1st(4)">
-        <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed6" ontouchstart="" onclick="check_1st(5)">
-        <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed7" ontouchstart="" onclick="check_1st(6)">
-        <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton" id="sed8" ontouchstart="" onclick="check_1st(7)">
-        
-
-    <details class="hints under">
-    <summary>ヒントはこちら</summary>
-    問題の解く流れについて
-    <details>
-        <summary>第1ヒント</summary>
-        web画面の1から8までの数字の下にある白黒の四角は、それぞれパネルを表しています。web画面の情報からあるパネルを選び、そのパネルをもとに迷路を解き進めます。
-    </details>
-    <details>
-        <summary>第2ヒント</summary>
-        例えば、1の問題だったら3枚のパネルを使って「1」を、3の問題だったら5枚のパネルを使って「3」を表すことはできないでしょうか。
-    </details>
-    <details>
-        <summary>第3ヒント</summary>
-        1から8までの数字を英語で考えてみましょう。
-    </details>
-    <details>
-        <summary>第4ヒント</summary>
-        例えば1の問題について、パネルで「ONE」を作り、そのパネルに記されたルールに従って、18×18マスの迷路を解いてみましょう。
-    </details>
-    1~8までのそれぞれの問題の解き方
-    <details>
-        <summary>1の問題</summary>
+        <details class="hints under">
+        <summary>ヒントはこちら</summary>
+        問題の解く流れについて
         <details>
-            <summary>「E(白)」のパネルの情報から</summary>、スタートの位置は18×18マスの迷路の一番左上のマス、ゴールの位置は18×18マスの迷路の一番右下のマスになります。
+            <summary>第1ヒント</summary>
+            web画面の1から8までの数字の下にある白黒の四角は、それぞれパネルを表しています。web画面の情報からあるパネルを選び、そのパネルをもとに迷路を解き進めます。
         </details>
         <details>
-            <summary>「O」と「N」のパネルの情報から</summary>、<img src="images/1x/tclover.png" alt="(クローバーを右90度回転させた図形）" class="suit">は通ることができません。
+            <summary>第2ヒント</summary>
+            例えば、1の問題だったら3枚のパネルを使って「1」を、3の問題だったら5枚のパネルを使って「3」を表すことはできないでしょうか。
         </details>
         <details>
+            <summary>第3ヒント</summary>
+            1から8までの数字を英語で考えてみましょう。
+        </details>
+        <details>
+            <summary>第4ヒント</summary>
+            例えば1の問題について、パネルで「ONE」を作り、そのパネルに記されたルールに従って、18×18マスの迷路を解いてみましょう。
+        </details>
+        1~8までのそれぞれの問題の解き方
+        <details>
+            <summary>1の問題</summary>
+            <details>
+                <summary>「E(白)」のパネルの情報から</summary>、スタートの位置は18×18マスの迷路の一番左上のマス、ゴールの位置は18×18マスの迷路の一番右下のマスになります。
+            </details>
+            <details>
+                <summary>「O」と「N」のパネルの情報から</summary>、<img src="images/1x/tclover.png" alt="(クローバーを右90度回転させた図形）" class="suit">は通ることができません。
+            </details>
+            <details>
             <summary>最初の経路</summary><img src="images/1x/redhint.png" class="hintboard">
-        </details>
-    </details>
-    <details>
-        <summary>2の問題</summary>
-        <details>
-            <summary>「W」のパネルについて</summary>、記されている図形はサイコロの5の目です。
+            </details>
         </details>
         <details>
-            <summary>「T」と「W」のパネルの情報から</summary>、サイコロの5の面は裏返す必要があり、面の数が2に変わります。つまり2の倍数文字目を読むということになります。
+            <summary>2の問題</summary>
+            <details>
+                <summary>「W」のパネルについて</summary>、記されている図形はサイコロの5の目です。
+            </details>
+            <details>
+                <summary>「T」と「W」のパネルの情報から</summary>、サイコロの5の面は裏返す必要があり、面の数が2に変わります。つまり2の倍数文字目を読むということになります。
+            </details>
+            <details>
+                <summary>最初の経路</summary><img src="images/1x/bluehint.png" class="hintboard">
+            </details>
         </details>
         <details>
-            <summary>最初の経路</summary><img src="images/1x/bluehint.png" class="hintboard">
-        </details>
-    </details>
-    <details>
-        <summary>3の問題</summary>
-        <details>
-            <summary>「R」のパネルについて</summary>、記されている図形はサイコロの6の目です。
+            <summary>3の問題</summary>
+            <details>
+                <summary>「R」のパネルについて</summary>、記されている図形はサイコロの6の目です。
         </details>
         <details>
             <summary>「T」と「R」のパネルの情報から</summary>、サイコロの6の面は裏返す必要があり、面の数が1に変わります。つまりスタートを0マス目として1の倍数マス目にしか曲がれません。（どのマス目でも曲がることができます）
@@ -276,8 +181,8 @@
             ・迷路は『最短経路』で進むことを忘れないようにしましょう。                
         </details>
         </details>
-
-        <!-- <a href="hint.html">ヒントはこちら</a> -->
+        </div>
+    </div>
     </main>
 </body>
 </html>
