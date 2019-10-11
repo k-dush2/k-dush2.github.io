@@ -355,7 +355,7 @@ img.answerletter{
 img.answerletters{
 
     position:absolute;
-    top:302px;
+    top:33.2%;
 }
 
 img.threeletter{
@@ -589,10 +589,10 @@ img.fiveletters{
     opacity:0.5;
     cursor: pointer;
 }
-
+/*
 #colors main img.answeringbutton:active{
     top:433px;
-}
+}*/
 
 img.phaselogo{
     width:6%;
@@ -620,10 +620,10 @@ img.answeringbutton:hover{
     opacity:0.5;
     cursor: pointer;
 }
-
+/*
 img.answeringbutton.under:active{
     top:80%;
-}
+}*/
 
 .ans{
     width:25%;
