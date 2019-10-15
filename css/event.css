@@ -46,3 +46,21 @@ p {
 .gath3{
   font-size: x-large;
 }
+
+.iromo1{
+  font-size:0.05em;
+}
+
+.iromo2{
+  color:RGB(216,12,111);
+}
+
+.iromo3{
+  font-size:0.5em;
+  color:#1e90ff;
+  vertical-align: top;
+}
+
+.white{
+  color:white;
+}
