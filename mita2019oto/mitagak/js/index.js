@@ -109,7 +109,7 @@ window.onload=function(){
                 }
                 else{
                     this.document.getElementsByClassName("word")[0].removeAttribute("id");
-                    this.document.getElementsByClassName("word")[0].innerHTML="ファンファーレ";
+                    this.document.getElementsByClassName("word")[0].innerHTML="フィナーレ";
                     this.document.getElementsByClassName("word")[0].setAttribute("id","fan");
                 }
                 turn=0;
