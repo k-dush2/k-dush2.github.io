@@ -37,7 +37,7 @@ body{
 }
 #fan{
     margin:0 3vw;
-    font-size: calc(3vmax + 2vw);
+    font-size: calc(4vmax + 3vw);
 }
 
 .main{
