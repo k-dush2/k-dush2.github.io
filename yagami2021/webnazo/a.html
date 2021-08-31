@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>K-dush2 矢上祭 | Web謎 A</title>
+</head>
+
+<body>
+  <h1>問題A</h1>
+
+  <div id="questionBox">
+    <p id="loading">loading...</p>
+  </div>
+  <script>
+    const Image = { portrait: 0, landscape: 1 }
+    let current = null
+    function reloadImageIfNeeded() {
+      const width = window.innerWidth
+      const height = window.innerHeight
+      const next = (height / width > 1) ? Image.portrait : Image.landscape
+      if (current != next) {
+        const box = document.getElementById('questionBox')
+        const fileName = (next == Image.portrait) ? "assets/A_portrait.jpg"
+                                                  : "assets/A_landscape.jpg"
+        box.innerHTML = `<img src="${fileName}" id="questionImage">`
+        current = next
+      }
+    }
+    window.onload = reloadImageIfNeeded
+    window.onresize = reloadImageIfNeeded
+  </script>
+  <style>
+    #questionImage {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+
+  <div id='answerBox'>
+    <form id='answerForm'>
+      <label for="answerInput">答えを入力してください</label>
+      <input type="text" id="answerInput" name="answer" placeholder="answer">
+      <input type="submit" value="回答">
+    </form>
+  </div>
+  <script>
+    const form = document.getElementById("answerForm")
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+      const input = document.getElementById('answerInput')
+      // TODO: なんか適当に答えをページ内に表示する
+      if (current == Image.portrait && input.value == 'きむちゃ' ||
+          current == Image.landscape && input.value == 'ききく') {
+            alert('正解です！')
+      } else {
+        alert('残念！')
+      }
+      return false
+    })
+  </script>
+
+</body>
+
+</html>
