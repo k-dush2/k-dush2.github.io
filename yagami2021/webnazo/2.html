@@ -13,14 +13,14 @@
   </script>
 
   <meta charset="utf-8">
-  <title>K-dush2公式サイト</title>
-  <link rel="shortcut icon" href="img/k-dush2.jpg" type="image/jpg">
-  <link rel="stylesheet" href="css/stylesheet.css">
-  <link rel="stylesheet" href="css/event.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- bootstrapはgridのみ使用 -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <title>問題2 | 矢上祭2021 | K-dush2公式サイト</title>
+  <link rel="shortcut icon" href="../../img/k-dush2.jpg" type="image/jpg">
+  <link rel="stylesheet" href="../../css/stylesheet.css">
+  <link rel="stylesheet" href="../../css/event.css">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css"> <!-- bootstrapはgridのみ使用 -->
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -28,10 +28,10 @@
   <header class="clearfix">
     <div class="container">
       <div id="header_img">
-        <a href="index.html" style="text-decoration:none;"><img src="img/k-dush2.gif"></a>
+        <a href="../../index.html" style="text-decoration:none;"><img src="../../img/k-dush2.gif"></a>
       </div>
       <ul id="left_menu">
-        <li><a href="index.html" style="text-decoration:none;">HOME</a></li>
+        <li><a href="../../index.html" style="text-decoration:none;">HOME</a></li>
         <li><a href="#contact" style="text-decoration:none;">CONTACT</a></li>
       </ul>
       <ul id="right_menu">
@@ -40,50 +40,110 @@
       </ul>
     </div>
   </header>
-  <div class="event_content">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-5">
-          <img src="img/archive_img/yagami2019.jpg" class="event_img">
-        </div>
-        <div class="col-sm-7">
-          <h2>2019年度矢上祭公演
-         <br>「ロボットキッカー」
-        </h2>
-        <p></p>
-          <h3>会場</h3>
-          <p>慶應義塾大学矢上キャンパス
-            <br>12棟208教室</p>
-            <h3>日時</h3>
-            <p>2019年10月12日(土)
-               <br> 12:30~
-               <br> 14:30~
-               <br> 16:30~
-               <br><br> 2018年10月13日(日)
-                <br>10:30~
-                <br>12:30~
-                <br>14:30~
-                <br>16:30~ </p>
-                <br><br>公演時間は45分、解説などを含めて拘束時間は90分を予定しております。
-                <h3>予約</h3>
-                <p>以下のURLより、passmarketにてご購入いただけます。 
-                  <br><a href="https://passmarket.yahoo.co.jp/event/show/detail/014qri10i3ix4.html">https://passmarket.yahoo.co.jp/event/show/detail/014qri10i3ix4.html</a>
-                  <br><br>【矢上祭公演 ご予約について】
-                  <br>6日 12:30~ 24枠 / 14:30~ 12枠 / 16:30~ 24枠
-                  <br>7日 10:30~ 24枠 / 12:30~ 12枠 / 14:30~ 12枠 / 16:30~ 24枠 
-                  <br>※お一人様4枠までご予約可能です。
-                    <br>料金
-                    <br>大人 1000円
-                    <br>学生 500円           
-                    <br>学生の方は一般チケットをご購入の上、現地で学生証をご提示ください。500円をキャッシュバックいたします。
-                    <br><br>諸注意
-                    <br>本公演は4人制公演です。
-                    <br>3名様以下でお越しの場合、他の参加者の方と一緒にゲームに参加する可能性がございます。</p>
 
-        </div>
-      </div>
+  <div id="mainContent">
+    <h1>問題2</h1>
+    <div id="questionBox">
+      <p id="loading">loading...</p>
     </div>
+    <script>
+      const Image = { portrait: 0, landscape: 1 }
+      let current = null
+      function reloadImageIfNeeded() {
+        const width = window.innerWidth
+        const height = window.innerHeight
+        const next = (height / width > 1) ? Image.portrait : Image.landscape
+        if (current != next) {
+          const box = document.getElementById('questionBox')
+          const fileName = (next == Image.portrait) ? "assets/2_portrait.png" : "assets/2_landscape.png"
+          box.innerHTML = `<img src="${fileName}" id="questionImage">`
+          current = next
+        }
+      }
+      window.onload = reloadImageIfNeeded
+      window.onresize = reloadImageIfNeeded
+    </script>
+    <style>
+      #questionImage {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        border: 5px solid gray;
+        box-shadow: 0px 10px 15px gray;
+        margin-bottom: 70px;
+      }
+      #questionBox {
+        margin: 15px;
+      }
+    </style>
+
+    <div id='answerBox'>
+      <form id='answerForm'>
+        <label for="answerInput">答えを入力してください</label><br>
+        <input type="text" id="answerInput" name="answer" placeholder="回答">
+        <input type="submit" value="回答">
+      </form>
+    </div>
+    <script>
+      const form = document.getElementById("answerForm")
+      form.addEventListener('submit', (event) => {
+        event.preventDefault()
+
+        let seikai = false
+        const input = document.getElementById('answerInput')
+        if (current == Image.portrait && ['日課', 'にっか', 'ニッカ'].includes(input.value) ||
+            current == Image.landscape && ['コック', 'こっく'].includes(input.value)) {
+              seikai = true
+        }
+
+        const box = document.getElementById('answerBox')
+        const oldImage = document.getElementById('resultImage')
+        if (oldImage !== null) { box.removeChild(oldImage) }
+        const image = document.createElement('img')
+        image.id = 'resultImage'
+        const imageURL = seikai ? 'assets/seikai.png' : 'assets/fuseikai.png'
+        image.setAttribute('src', imageURL)
+        box.appendChild(image)
+        return false
+      })
+    </script>
+    <style>
+      #answerBox {
+        padding: 30px;
+        background-color: #26ADE4;
+        border-radius: 10px;
+        box-shadow: 0px 10px 15px #26aee487;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+        padding: 15px;
+      }
+      #answerBox label {
+        color: #ffffff;
+        font-size: medium;
+        margin: 15px;
+      }
+      /* こんな感じの書き方したい。まあ普通にhtml書いてもよし */
+      #answerInput::after {
+        content: '<div></div>';
+        position: relative; /*.text_underline::beforeの親要素*/
+        border-top: 1px solid #c2c2c2; /*text3の下線*/
+      }
+      #resultImage {
+        padding: 20px;
+        width: 100%;
+        height: auto;
+      }
+    </style>
   </div>
+  <style>
+    #mainContent {
+      text-align: center;
+      padding-top: 110px;
+      padding-bottom: 70px;
+    }
+  </style>
+
   <div id="contact">
     <div class="contact_content clearfix">
       <div class="container">
@@ -184,23 +244,23 @@
 
       $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
-        if(scrollTop != 0)
-          $('header').stop().animate({'opacity':'0.2'},400);
+        if(scrollTop >= 50)
+          $('header').stop().animate({'opacity':'0.2'},150);
         else
-          $('header').stop().animate({'opacity':'1'},400);
+          $('header').stop().animate({'opacity':'1'},150);
       });
 
       $('header').hover(
         function (e) {
           var scrollTop = $(window).scrollTop();
           if(scrollTop != 0){
-           $('header').stop().animate({'opacity':'1'},400);
+           $('header').stop().animate({'opacity':'1'},150);
           }
         },
         function (e) {
           var scrollTop = $(window).scrollTop();
           if(scrollTop != 0){
-           $('header').stop().animate({'opacity':'0.2'},400);
+           $('header').stop().animate({'opacity':'0.2'},150);
           }
         }
       );
