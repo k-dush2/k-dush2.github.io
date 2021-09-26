@@ -13,7 +13,7 @@
   </script>
 
   <meta charset="utf-8">
-  <title>矢上祭2021 | K-dush2公式サイト</title>
+  <title>問題1 | 矢上祭2021 | K-dush2公式サイト</title>
   <link rel="shortcut icon" href="../../img/k-dush2.jpg" type="image/jpg">
   <link rel="stylesheet" href="../../css/stylesheet.css">
   <link rel="stylesheet" href="../../css/event.css">
@@ -40,30 +40,68 @@
       </ul>
     </div>
   </header>
+
   <div id="mainContent">
-    <a href="1.html" class='questionLink'>問題1はこちら</a><p><p><p><p>
-    <a href="2.html" class='questionLink'>問題2はこちら</a><p><p><p><p>
-    <a href="3.html" class='questionLink'>問題3はこちら</a><p><p><p>
-    <div id="answerBox">
+    <h1>問題1</h1>
+    <div id="questionBox">
+      <p id="loading">loading...</p>
+    </div>
+    <script>
+      const Image = { portrait: 0, landscape: 1 }
+      let current = null
+      function reloadImageIfNeeded() {
+        const width = window.innerWidth
+        const height = window.innerHeight
+        const next = (height / width > 1) ? Image.portrait : Image.landscape
+        if (current != next) {
+          const box = document.getElementById('questionBox')
+          const fileName = (next == Image.portrait) ? "assets/1_portrait.png" : "assets/1_landscape.png"
+          box.innerHTML = `<img src="${fileName}" id="questionImage">`
+          current = next
+        }
+      }
+      window.onload = reloadImageIfNeeded
+      window.onresize = reloadImageIfNeeded
+    </script>
+    <style>
+      #questionImage {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        border: 5px solid gray;
+        box-shadow: 0px 10px 15px gray;
+        margin-bottom: 70px;
+      }
+      #questionBox {
+        margin: 15px;
+      }
+    </style>
+
+    <div id='answerBox'>
       <form id='answerForm'>
-        <label for="answerInput"><span>異なる見方をしたときに</span><span>重なる言葉をかけ</span></label><br>
+        <label for="answerInput">答えを入力してください</label><br>
         <input type="text" id="answerInput" name="answer" placeholder="回答">
-        <input type="submit" id="answerSubmit" value="回答">
+        <input type="submit" value="回答">
       </form>
     </div>
     <script>
       const form = document.getElementById("answerForm")
       form.addEventListener('submit', (event) => {
         event.preventDefault()
+
+        let seikai = false
         const input = document.getElementById('answerInput')
-        let seikai = ['キック', 'きっく'].includes(input.value)
+        if (current == Image.portrait && ['キムチ', 'きむち'].includes(input.value) ||
+            current == Image.landscape && ['記憶', 'キオク', 'きおく'].includes(input.value)) {
+              seikai = true
+        }
 
         const box = document.getElementById('answerBox')
         const oldImage = document.getElementById('resultImage')
         if (oldImage !== null) { box.removeChild(oldImage) }
         const image = document.createElement('img')
         image.id = 'resultImage'
-        const imageURL = seikai ? 'assets/clear.png' : 'assets/fuseikai.png'
+        const imageURL = seikai ? 'assets/seikai.png' : 'assets/fuseikai.png'
         image.setAttribute('src', imageURL)
         box.appendChild(image)
         return false
@@ -71,48 +109,30 @@
     </script>
     <style>
       #answerBox {
+        padding: 30px;
         background-color: #26ADE4;
         border-radius: 10px;
         box-shadow: 0px 10px 15px #26aee487;
         margin-left: auto;
         margin-right: auto;
-        max-width: 350px;
+        max-width: 300px;
         padding: 15px;
       }
       #answerBox label {
         color: #ffffff;
-        margin: 10px;
+        font-size: medium;
+        margin: 15px;
+      }
+      /* こんな感じの書き方したい。まあ普通にhtml書いてもよし */
+      #answerInput::after {
+        content: '<div></div>';
+        position: relative; /*.text_underline::beforeの親要素*/
+        border-top: 1px solid #c2c2c2; /*text3の下線*/
       }
       #resultImage {
         padding: 20px;
         width: 100%;
         height: auto;
-      }
-
-      .questionLink:link {
-        color: #26ADE4;
-      }
-      .questionLink:visited{
-        color: gray;
-      }
-      a:active{
-        color: #26ADE4;
-      }
-      .questionLink {
-        background-color: white;
-        color: #26ADE4;
-        border: #26ADE4 solid 2px;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 50px;
-      }
-      .questionLink:hover {
-        color: white;
-        background-color: #26ADE4;
-        letter-spacing: normal;
-        opacity: 1;
-        filter: none;
-        -moz-opacity: 1;
       }
     </style>
   </div>
@@ -123,6 +143,7 @@
       padding-bottom: 70px;
     }
   </style>
+
   <div id="contact">
     <div class="contact_content clearfix">
       <div class="container">
@@ -223,23 +244,23 @@
 
       $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
-        if(scrollTop != 0)
-          $('header').stop().animate({'opacity':'0.2'},400);
+        if(scrollTop >= 50)
+          $('header').stop().animate({'opacity':'0.2'},150);
         else
-          $('header').stop().animate({'opacity':'1'},400);
+          $('header').stop().animate({'opacity':'1'},150);
       });
 
       $('header').hover(
         function (e) {
           var scrollTop = $(window).scrollTop();
           if(scrollTop != 0){
-           $('header').stop().animate({'opacity':'1'},400);
+           $('header').stop().animate({'opacity':'1'},150);
           }
         },
         function (e) {
           var scrollTop = $(window).scrollTop();
           if(scrollTop != 0){
-           $('header').stop().animate({'opacity':'0.2'},400);
+           $('header').stop().animate({'opacity':'0.2'},150);
           }
         }
       );

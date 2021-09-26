@@ -13,14 +13,14 @@
   </script>
 
   <meta charset="utf-8">
-  <title>矢上祭2021 | K-dush2公式サイト</title>
-  <link rel="shortcut icon" href="../img/k-dush2.jpg" type="image/jpg">
-  <link rel="stylesheet" href="../css/stylesheet.css">
-  <link rel="stylesheet" href="../css/event.css">
-  <link rel="stylesheet" href="../css/bootstrap.min.css"> <!-- bootstrapはgridのみ使用 -->
-  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <title>問題2 | 矢上祭2021 | K-dush2公式サイト</title>
+  <link rel="shortcut icon" href="../../img/k-dush2.jpg" type="image/jpg">
+  <link rel="stylesheet" href="../../css/stylesheet.css">
+  <link rel="stylesheet" href="../../css/event.css">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css"> <!-- bootstrapはgridのみ使用 -->
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -28,10 +28,10 @@
   <header class="clearfix">
     <div class="container">
       <div id="header_img">
-        <a href="../index.html" style="text-decoration:none;"><img src="../img/k-dush2.gif"></a>
+        <a href="../../index.html" style="text-decoration:none;"><img src="../../img/k-dush2.gif"></a>
       </div>
       <ul id="left_menu">
-        <li><a href="../index.html" style="text-decoration:none;">HOME</a></li>
+        <li><a href="../../index.html" style="text-decoration:none;">HOME</a></li>
         <li><a href="#contact" style="text-decoration:none;">CONTACT</a></li>
       </ul>
       <ul id="right_menu">
@@ -41,56 +41,108 @@
     </div>
   </header>
 
-  <h1>問題A</h1>
-  <div id="questionBox">
-    <p id="loading">loading...</p>
-  </div>
-  <script>
-    const Image = { portrait: 0, landscape: 1 }
-    let current = null
-    function reloadImageIfNeeded() {
-      const width = window.innerWidth
-      const height = window.innerHeight
-      const next = (height / width > 1) ? Image.portrait : Image.landscape
-      if (current != next) {
-        const box = document.getElementById('questionBox')
-        const fileName = (next == Image.portrait) ? "assets/A_portrait.jpg" : "assets/A_landscape.jpg"
-        box.innerHTML = `<img src="${fileName}" id="questionImage">`
-        current = next
+  <div id="mainContent">
+    <h1>問題2</h1>
+    <div id="questionBox">
+      <p id="loading">loading...</p>
+    </div>
+    <script>
+      const Image = { portrait: 0, landscape: 1 }
+      let current = null
+      function reloadImageIfNeeded() {
+        const width = window.innerWidth
+        const height = window.innerHeight
+        const next = (height / width > 1) ? Image.portrait : Image.landscape
+        if (current != next) {
+          const box = document.getElementById('questionBox')
+          const fileName = (next == Image.portrait) ? "assets/2_portrait.png" : "assets/2_landscape.png"
+          box.innerHTML = `<img src="${fileName}" id="questionImage">`
+          current = next
+        }
       }
-    }
-    window.onload = reloadImageIfNeeded
-    window.onresize = reloadImageIfNeeded
-  </script>
+      window.onload = reloadImageIfNeeded
+      window.onresize = reloadImageIfNeeded
+    </script>
+    <style>
+      #questionImage {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        border: 5px solid gray;
+        box-shadow: 0px 10px 15px gray;
+        margin-bottom: 70px;
+      }
+      #questionBox {
+        margin: 15px;
+      }
+    </style>
+
+    <div id='answerBox'>
+      <form id='answerForm'>
+        <label for="answerInput">答えを入力してください</label><br>
+        <input type="text" id="answerInput" name="answer" placeholder="回答">
+        <input type="submit" value="回答">
+      </form>
+    </div>
+    <script>
+      const form = document.getElementById("answerForm")
+      form.addEventListener('submit', (event) => {
+        event.preventDefault()
+
+        let seikai = false
+        const input = document.getElementById('answerInput')
+        if (current == Image.portrait && ['日課', 'にっか', 'ニッカ'].includes(input.value) ||
+            current == Image.landscape && ['コック', 'こっく'].includes(input.value)) {
+              seikai = true
+        }
+
+        const box = document.getElementById('answerBox')
+        const oldImage = document.getElementById('resultImage')
+        if (oldImage !== null) { box.removeChild(oldImage) }
+        const image = document.createElement('img')
+        image.id = 'resultImage'
+        const imageURL = seikai ? 'assets/seikai.png' : 'assets/fuseikai.png'
+        image.setAttribute('src', imageURL)
+        box.appendChild(image)
+        return false
+      })
+    </script>
+    <style>
+      #answerBox {
+        padding: 30px;
+        background-color: #26ADE4;
+        border-radius: 10px;
+        box-shadow: 0px 10px 15px #26aee487;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+        padding: 15px;
+      }
+      #answerBox label {
+        color: #ffffff;
+        font-size: medium;
+        margin: 15px;
+      }
+      /* こんな感じの書き方したい。まあ普通にhtml書いてもよし */
+      #answerInput::after {
+        content: '<div></div>';
+        position: relative; /*.text_underline::beforeの親要素*/
+        border-top: 1px solid #c2c2c2; /*text3の下線*/
+      }
+      #resultImage {
+        padding: 20px;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </div>
   <style>
-    #questionImage {
-      max-width: 100%;
-      height: auto;
+    #mainContent {
+      text-align: center;
+      padding-top: 110px;
+      padding-bottom: 70px;
     }
   </style>
-
-  <div id='answerBox'>
-    <form id='answerForm'>
-      <label for="answerInput">答えを入力してください</label>
-      <input type="text" id="answerInput" name="answer" placeholder="answer">
-      <input type="submit" value="回答">
-    </form>
-  </div>
-  <script>
-    const form = document.getElementById("answerForm")
-    form.addEventListener('submit', (event) => {
-      event.preventDefault()
-      const input = document.getElementById('answerInput')
-      // TODO: なんか適当に答えをページ内に表示する
-      if (current == Image.portrait && input.value == 'きむちゃ' ||
-          current == Image.landscape && input.value == 'ききく') {
-            alert('正解です！')
-      } else {
-        alert('残念！')
-      }
-      return false
-    })
-  </script>
 
   <div id="contact">
     <div class="contact_content clearfix">
@@ -192,23 +244,23 @@
 
       $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
-        if(scrollTop != 0)
-          $('header').stop().animate({'opacity':'0.2'},400);
+        if(scrollTop >= 50)
+          $('header').stop().animate({'opacity':'0.2'},150);
         else
-          $('header').stop().animate({'opacity':'1'},400);
+          $('header').stop().animate({'opacity':'1'},150);
       });
 
       $('header').hover(
         function (e) {
           var scrollTop = $(window).scrollTop();
           if(scrollTop != 0){
-           $('header').stop().animate({'opacity':'1'},400);
+           $('header').stop().animate({'opacity':'1'},150);
           }
         },
         function (e) {
           var scrollTop = $(window).scrollTop();
           if(scrollTop != 0){
-           $('header').stop().animate({'opacity':'0.2'},400);
+           $('header').stop().animate({'opacity':'0.2'},150);
           }
         }
       );
