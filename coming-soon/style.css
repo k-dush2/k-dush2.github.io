@@ -17,13 +17,17 @@
   justify-content: center;
 
   margin: 30px auto 30px auto;
-  padding: 20px;
+  padding: 5px;
   background-color: #26ADE4;
   border-radius: 20px;
 }
 
 .answer_box {
   display: flex;
+  padding: 5px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 8px;
 }
 
 .answer_box>.month_input {
@@ -31,7 +35,7 @@
 }
 
 #bt {
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 #cleared {
@@ -50,4 +54,10 @@
 
 .twitter-share-button {
   margin: 30px;
+}
+
+#batu_txt {
+  margin: 30px auto 30px auto;
+  text-align: center;
+  font-size: 24px;
 }
