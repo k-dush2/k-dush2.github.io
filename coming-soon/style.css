@@ -1,0 +1,64 @@
+#main {
+  padding-top: 69px;
+}
+
+#quiz_image {
+  display: block;
+  width: clamp(350px, 90%, 1200px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 50px;
+}
+
+#answer_box_wrapper {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin: 30px auto 30px auto;
+  padding: 5px;
+  background-color: #26ADE4;
+  border-radius: 20px;
+}
+
+.answer_box {
+  display: flex;
+  padding: 5px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+.answer_box>.month_input {
+  padding-right: 3px;
+}
+
+#bt {
+  margin-left: 5px;
+}
+
+#cleared {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#clear_image {
+  width: clamp(350px, 80%, 600px);
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.twitter-share-button {
+  margin: 30px;
+}
+
+#batu_txt {
+  margin: 30px auto 30px auto;
+  text-align: center;
+  font-size: 24px;
+}
