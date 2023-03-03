@@ -5,7 +5,7 @@ img{
 }
 
 
-input,button ,textarea{
+button,textarea{
     margin: 0;
     padding: 0;
     background: none;
@@ -25,6 +25,9 @@ input,button ,textarea{
 
 .relative{
     position:relative;
+}
+.absolute{
+    position:absolute;
 }
 
 img.press{
@@ -136,35 +139,35 @@ div.bigwhite:before{
 }
 
 .num1{
-    left:14.3%;
+    left:13.7%;
 }
 
 .num2{
-    left:21.7%;
+    left:22.5%;
 }
 
 .num3{
-    left:29.6%;
+    left:30.3%;
     
 }
 .num4{
-    left:40.5%;
+    left:42%;
 
 }
 .num5{
-   left:49.7%;
+   left:51%;
 
 }
 .num6{
-   left:58.5%;
+   left:58.3%;
     
 }
 .num7{
-    left:66.7%;
+    left:67.5%;
     
 }
 .num8{
-    left:78.2%;
+    left:78.8%;
 }
 
 div.whitesquare{
@@ -358,6 +361,16 @@ img.answerletters{
     top:33.2%;
 }
 
+img.oneletter{
+    width:2.7%;
+    height:auto;
+}
+
+img.twoletter{
+    width:5.5%;
+    height:auto;
+}
+
 img.threeletter{
     width:4.6%;
     height:auto;
@@ -512,6 +525,14 @@ img.fiveletters{
     top:40%;
 }
 
+#start main div.textbox input{
+    width:20%;
+    height:auto;
+    border:double;
+    position:absolute;
+    top:12px;
+}
+
 #Color0{
     left:13.3%;
 }
@@ -641,11 +662,38 @@ video.board{
     position:absolute;
 }
 
-img.board{
+#segment img.board{
+    width:75%;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#puzzle img.board{
+    width:28%;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#last img.board{
     width:30%;
     height:auto;
-    margin:0 auto;
-    position:absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.board{
+    width:45%;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.board{
+    width:45%;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .expla{
@@ -696,12 +744,20 @@ img.box{
     top:70%;
 }
 
+.u60p{
+    top:60%;
+}
+
 .u600{
     top:65%;
 }
 
 .u700{
-    top:68%;
+    top:69%;
+}
+
+.t12p{
+    top: 12px;
 }
 
 .lineup{
@@ -709,9 +765,11 @@ img.box{
 }
 
 .center{
+    display: block;
     left:0;
     right:0;
-    margin:auto;
+    margin-right: auto;
+    margin-left:auto;
 }
 
 .arrow{

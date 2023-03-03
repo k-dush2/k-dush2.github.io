@@ -29,18 +29,31 @@ function slideshow(t){
     }
 }
 
+function check_start(){
+    var ans = '411';
+    var ans_zenkaku = '４１１';
+    var value = document.getElementById("Start").value;
+    if((value === ans) || (value === ans_zenkaku)){
+        alert("正解です")
+        window.location.href="step1.html";
+
+    }else{
+        alert("間違っています")
+    }
+}
+
 function check_1st(i){
-    var ans_katakana = ['レッド','ブルー','ミドリイロ','オレンジ','ムラサキ','キイロ','サクライロ','ネズミイロ'];
-    var ans_hiragana = ['れっど','ぶるー','みどりいろ','おれんじ','むらさき','きいろ','さくらいろ','ねずみいろ'];
-    var ans_kanji = ['レッド','ブルー','緑色','オレンジ','紫','黄色','桜色','鼠色'];
-    var ans_kanjimajiri = ['レッド','ブルー','みどり色','オレンジ','紫','黄色','さくら色','ねずみ色'];
+    var ans_katakana = ['ミドリイロ','キイロ','ヒイロ','クロイロ','シロイロ','ネズミイロ','サクライロ','ソライロ'];
+    var ans_hiragana = ['みどりいろ','きいろ','ひいろ','くろいろ','しろいろ','ねずみいろ','さくらいろ','そらいろ'];
+    var ans_kanji = ['緑色','黄色','緋色','黒色','白色','鼠色','桜色','空色'];
+    var ans_kanjimajiri = ['みどり色','黄いろ','ひ色','くろ色','しろ色','ねずみ色','さくら色','そら色'];
     var textid ="Color" +  String(i);
     var color = document.getElementById(textid).value;
     //alert(color);
     
     if((color === ans_hiragana[i] )|| (color ===　ans_kanji[i]) || (color ===　ans_katakana[i]) || (color ===　ans_kanjimajiri[i])){
         alert("正解です")
-        display_ans(i);
+        //display_ans(i);
     }else{
         alert("間違っています")
     }
@@ -52,10 +65,10 @@ function check_1st(i){
 function check_1st_true(){
     var flags = [false,false,false,false,false,false,false,false];
     var clear = [true,true,true,true,true,true,true,true];
-    var ans_katakana = ['レッド','ブルー','ミドリイロ','オレンジ','ムラサキ','キイロ','サクライロ','ネズミイロ'];
-    var ans_hiragana = ['れっど','ぶるー','みどりいろ','おれんじ','むらさき','きいろ','さくらいろ','ねずみいろ'];
-    var ans_kanji = ['レッド','ブルー','緑色','オレンジ','紫','黄色','桜色','鼠色'];
-    var ans_kanjimajiri = ['レッド','ブルー','みどり色','オレンジ','紫','黄色','さくら色','ねずみ色'];
+    var ans_katakana = ['ミドリイロ','キイロ','ヒイロ','クロイロ','シロイロ','ネズミイロ','サクライロ','ソライロ'];
+    var ans_hiragana = ['みどりいろ','きいろ','ひいろ','くろいろ','しろいろ','ねずみいろ','さくらいろ','そらいろ'];
+    var ans_kanji = ['緑色','黄色','緋色','黒色','白色','鼠色','桜色','空色'];
+    var ans_kanjimajiri = ['みどり色','黄いろ','ひ色','くろ色','しろ色','ねずみ色','さくら色','そら色'];
     for(i=0;i<8;i++){
         var textid ="Color" +  String(i);
         var color = document.getElementById(textid).value;
@@ -211,10 +224,10 @@ function display_ans(i){
 }
 
 function check_2nd(){
-    var correct = ["SOLUTION","solution","Solution"];
+    var correct = 'クリア';
     var answer = document.getElementById("Segment").value;
 //    console.log(elem_in_array(answer,correct));
-    if(elem_in_array(answer,correct)){
+    if(answer === correct){
         alert("正解です");
         window.location.href="step3.html";
     }else{
@@ -224,25 +237,25 @@ function check_2nd(){
 
 
 function check_3rd(){
-    var correct = ["news","News","NEWS"];
+    var correct = 'スカイ';
     var answer = document.getElementById("Put").value;
 //    console.log(elem_in_array(answer,correct));
-    if(elem_in_array(answer,correct)){
+    if(answer === correct){
         alert("正解です");
-        window.location.href="step4.html";
+        window.location.href="step3-2.html";
     }else{
         alert("間違っています");
     }
 }
         
 function check_4th(){
-    var correct = ["無限","むげん","ムゲン"];
-    var extra = ["UNLIMITED","unlimited","Unlimited"];
+    var correct = ["オワリ"];
+    var extra = ["ごくろうさん"];
     var answer = document.getElementById("Slide").value;
 //    console.log(elem_in_array(answer,correct));
     if(elem_in_array(answer,correct)){
         alert("正解です");
-        window.location.href="step5.html";
+        window.location.href="step4.html";
     }else if(elem_in_array(answer,extra)){
         alert("正解です");
         window.location.href="clearpage.html"
@@ -252,10 +265,10 @@ function check_4th(){
 }
 
 function check_5th(){
-    var correct = ["UNLIMITED","unlimited","Unlimited"];
+    var correct = 'ごくろうさん';
     var answer = document.getElementById("Put").value;
 //    console.log(elem_in_array(answer,correct));
-    if(elem_in_array(answer,correct)){
+    if(answer === correct){
         alert("正解です");
         window.location.href="clearpage.html";
     }else{

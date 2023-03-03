@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <title>えいと | K-dush2</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" charset="utf-8" async="" src="./js/script.js"></script>
     <!--link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:768px) and (max-width:991px)"-->
     <!--link rel="stylesheet" href="css/pc.css" media="screen and (min-width:992px)"-->
-    <script type="text/javascript" charset="utf-8" async="" src="./js/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow,noarchive">
 </head>
 
-<body class="index" id="start"> 
+<body id="slide">
     <main>
-        <div class="relative">
-        <img src="images/op1.1.jpg" alt="start" class="board center">
-        </div>
-        <div class="relative">
-            <div class="textbox">
-                <input type="text" id="Start" class="absolute center under" ontouchstart="" id="start1" placeholder="数字3ケタ">
-            </div>
-        </div>
-        <div class="relative">
-        <img src="images/1x/answerbutton.png" alt="送信" class="absolute mright answeringbutton t12p" onclick="check_start()">
-        </div>
+        <div id="wrapper">
+            <div id="content">
+        <img src="images/1x/3rd.png" alt="3rd" class="phaselogo">
+        <img src="images/1x/board.png" class="board center" alt="board">
 
-    </main>
+            <div class="textbox">
+                <input type="text" id="Put" class="ans center u600" value="" placeholder="カタカナ3文字">
+            </div>
+            <img src="images/1x/answerbutton.png" alt="送信" class="answeringbutton mright u600" ontouchstart="" onclick="check_3rd()">
+
+        </div>
+        </div>
 </body>
 </html>
