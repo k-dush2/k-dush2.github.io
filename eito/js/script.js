@@ -249,7 +249,7 @@ function check_3rd(){
 }
         
 function check_4th(){
-    var correct = ["オワリ"];
+    var correct = ["オワリ","終わり","おわり"];
     var extra = ["ごくろうさん"];
     var answer = document.getElementById("Slide").value;
 //    console.log(elem_in_array(answer,correct));
