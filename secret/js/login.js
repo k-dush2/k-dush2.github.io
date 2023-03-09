@@ -10,7 +10,7 @@ function checkLogin(){
     }else if(mail == "niarb@ponko2.com" && password == "ナシ"){
         window.location.href = "../brain.html";
     }else{
-        alart("メールアドレスまたはパスワードが間違っています。");
+        window.alert("メールアドレスまたはパスワードが間違っています。");
     }
 
 };
